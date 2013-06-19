@@ -1,0 +1,15 @@
+package com.example.bukalapaklogin;
+
+import android.content.Context;
+
+public class APIServer {
+	String userid;
+	String token;
+	Context context;
+	public APIServer(Context con)
+	{
+		this.context = con;
+	}
+	
+	public 
+}

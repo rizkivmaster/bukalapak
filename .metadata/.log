@@ -2017,3 +2017,214 @@ Java Model Exception: Java Model Status [Timed out while retrieving the attached
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 !SUBENTRY 1 org.eclipse.jdt.core 4 1012 2013-06-19 11:14:11.041
 !MESSAGE Timed out while retrieving the attached javadoc for View [in View.class [in android.view [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] 
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2013-06-19 11:37:31.711
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Timed out while retrieving the attached javadoc for UrlEncodedFormEntity [in UrlEncodedFormEntity.class [in org.apache.http.client.entity [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] ]
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:808)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1037)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:643)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:621)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:567)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:559)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:142)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:85)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1012 2013-06-19 11:37:31.712
+!MESSAGE Timed out while retrieving the attached javadoc for UrlEncodedFormEntity [in UrlEncodedFormEntity.class [in org.apache.http.client.entity [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] 
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2013-06-19 11:37:40.129
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Timed out while retrieving the attached javadoc for UrlEncodedFormEntity [in UrlEncodedFormEntity.class [in org.apache.http.client.entity [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] ]
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:808)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1037)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:643)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:95)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:58)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:555)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1012 2013-06-19 11:37:40.129
+!MESSAGE Timed out while retrieving the attached javadoc for UrlEncodedFormEntity [in UrlEncodedFormEntity.class [in org.apache.http.client.entity [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] 
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2013-06-19 11:38:24.718
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Timed out while retrieving the attached javadoc for BasicNameValuePair [in BasicNameValuePair.class [in org.apache.http.message [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] ]
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:808)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1037)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:643)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:621)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:567)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:559)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:142)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:85)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1012 2013-06-19 11:38:24.718
+!MESSAGE Timed out while retrieving the attached javadoc for BasicNameValuePair [in BasicNameValuePair.class [in org.apache.http.message [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] 
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2013-06-19 11:46:48.377
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Timed out while retrieving the attached javadoc for Toast [in Toast.class [in android.widget [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] ]
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:808)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1037)
+	at org.eclipse.jdt.internal.core.BinaryField.getAttachedJavadoc(BinaryField.java:121)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:95)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:58)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:555)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1012 2013-06-19 11:46:48.377
+!MESSAGE Timed out while retrieving the attached javadoc for Toast [in Toast.class [in android.widget [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] 
+!SESSION 2013-06-19 13:18:58.860 -----------------------------------------------
+eclipse.buildId=v21.0.0-519525
+java.version=1.7.0_15
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product com.android.ide.eclipse.adt.package.product
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2013-06-19 13:19:42.716
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Timed out while retrieving the attached javadoc for HttpRequestBase [in HttpRequestBase.class [in org.apache.http.client.methods [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] ]
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:808)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1037)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:643)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:95)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:58)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:555)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1012 2013-06-19 13:19:42.729
+!MESSAGE Timed out while retrieving the attached javadoc for HttpRequestBase [in HttpRequestBase.class [in org.apache.http.client.methods [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] 
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2013-06-19 13:19:50.018
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Timed out while retrieving the attached javadoc for AbstractHttpMessage [in AbstractHttpMessage.class [in org.apache.http.message [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] ]
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:808)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1037)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:643)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:95)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:58)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:555)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1012 2013-06-19 13:19:50.019
+!MESSAGE Timed out while retrieving the attached javadoc for AbstractHttpMessage [in AbstractHttpMessage.class [in org.apache.http.message [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] 
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2013-06-19 13:19:50.050
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Timed out while retrieving the attached javadoc for AbstractHttpMessage [in AbstractHttpMessage.class [in org.apache.http.message [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] ]
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:808)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1037)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:643)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:95)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:58)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:555)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1012 2013-06-19 13:19:50.050
+!MESSAGE Timed out while retrieving the attached javadoc for AbstractHttpMessage [in AbstractHttpMessage.class [in org.apache.http.message [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] 
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2013-06-19 13:20:07.746
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Timed out while retrieving the attached javadoc for AbstractHttpMessage [in AbstractHttpMessage.class [in org.apache.http.message [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] ]
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:808)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1037)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:643)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:95)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:58)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:555)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1012 2013-06-19 13:20:07.746
+!MESSAGE Timed out while retrieving the attached javadoc for AbstractHttpMessage [in AbstractHttpMessage.class [in org.apache.http.message [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] 
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2013-06-19 13:20:13.325
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Timed out while retrieving the attached javadoc for HTTP [in HTTP.class [in org.apache.http.protocol [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] ]
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:808)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1037)
+	at org.eclipse.jdt.internal.core.BinaryField.getAttachedJavadoc(BinaryField.java:121)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:95)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:58)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:555)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1012 2013-06-19 13:20:13.325
+!MESSAGE Timed out while retrieving the attached javadoc for HTTP [in HTTP.class [in org.apache.http.protocol [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] 
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2013-06-19 13:20:16.197
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Timed out while retrieving the attached javadoc for AbstractHttpMessage [in AbstractHttpMessage.class [in org.apache.http.message [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] ]
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:808)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1037)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:643)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:95)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:58)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:555)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1012 2013-06-19 13:20:16.197
+!MESSAGE Timed out while retrieving the attached javadoc for AbstractHttpMessage [in AbstractHttpMessage.class [in org.apache.http.message [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] 
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2013-06-19 13:20:22.339
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Timed out while retrieving the attached javadoc for HttpRequestBase [in HttpRequestBase.class [in org.apache.http.client.methods [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] ]
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:808)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1037)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:643)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:95)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:58)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:555)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1012 2013-06-19 13:20:22.339
+!MESSAGE Timed out while retrieving the attached javadoc for HttpRequestBase [in HttpRequestBase.class [in org.apache.http.client.methods [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] 
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2013-06-19 13:30:07.739
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [Timed out while retrieving the attached javadoc for List [in List.class [in java.util [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] ]
+	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:808)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1037)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:643)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:95)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:58)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:555)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1012 2013-06-19 13:30:07.739
+!MESSAGE Timed out while retrieving the attached javadoc for List [in List.class [in java.util [in C:\Program Files (x86)\adt-bundle-windows\sdk\platforms\android-14\android.jar]]] 
