@@ -1,0 +1,123 @@
+package com.example.bukalapaklogin;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.net.Authenticator;
+import java.net.HttpURLConnection;
+import java.net.PasswordAuthentication;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ThreadFactory;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.AbstractHttpEntity;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.protocol.HTTP;
+
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.app.Activity;
+import android.util.Base64;
+import android.util.Log;
+import android.view.Menu;
+
+public class MainActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        EditText userText = (EditText) findViewById(R.id.editText1);
+        EditText passText = (EditText) findViewById(R.id.editText1);
+        new PostData().execute("test");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.activity_main, menu);
+        return true;
+    }
+    
+    
+    class PostData extends AsyncTask<String, String, String>
+    {
+    	private String getB64Auth (String login, String pass) {
+    		   String source=login+":"+pass;
+    		   String ret="Basic "+Base64.encodeToString(source.getBytes(),Base64.URL_SAFE|Base64.NO_WRAP);
+    		   return ret;
+    		 }
+
+		@Override
+		protected String doInBackground(String... arg0) {
+			// TODO Auto-generated method stub
+	        // Create a new HttpClient and Post Header
+			String result = null;
+	        DefaultHttpClient httpclient = new DefaultHttpClient();
+	        HttpPost httppost = new HttpPost("https://api.bukalapak.com/v1/authenticate.json");
+	        
+	        try {
+	            // Execute HTTP Post Request
+	        	httppost.setHeader("Accept", "application/json");
+		        httppost.setHeader("User-Agent", "Apache-HttpClient/4.1 (java 1.5)");
+		        httppost.setHeader("Authorization",getB64Auth("rizkivmaster","18091992gnome"));
+	            HttpResponse response = httpclient.execute(httppost);
+	            result =  parse(response.getEntity().getContent());
+	        } catch (ClientProtocolException e) {
+	            // TODO Auto-generated catch block
+	        } catch (IOException e) {
+	            // TODO Auto-generated catch block
+	        } 
+			return result;
+		}
+		
+		@Override
+		protected void onPostExecute(String result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+			Log.i("Test", result);
+            Log.e("Hello", "just test");
+		}
+    	
+    }
+    
+    public String parse(InputStream is)
+    {
+    	BufferedReader reader = null;
+		try {
+			reader = new BufferedReader(new InputStreamReader(
+			        is, "iso-8859-1"), 8);
+		} catch (UnsupportedEncodingException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+        StringBuilder sb = new StringBuilder();
+        String line = null;
+        try {
+			while ((line = reader.readLine()) != null) {
+			    sb.append(line);
+			}
+		
+        is.close();
+        } 
+        catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        String response = sb.toString();
+        return response;
+    }
+    
+}

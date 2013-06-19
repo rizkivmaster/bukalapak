@@ -1,0 +1,121 @@
+package com.example.bukalapaklogin;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONObject;
+
+import android.app.Activity;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.util.Base64;
+import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+
+public class MainActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        EditText userText = (EditText) findViewById(R.id.editText1);
+        EditText passText = (EditText) findViewById(R.id.editText2);
+        Button submitBtn = (Button) findViewById(R.id.button1);
+        submitBtn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				new PostData().execute("test");
+			}
+		});
+        
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.activity_main, menu);
+        return true;
+    }
+    
+    
+    class PostData extends AsyncTask<String, String, String>
+    {
+    	private String getB64Auth (String login, String pass) {
+    		   String source=login+":"+pass;
+    		   String ret="Basic "+Base64.encodeToString(source.getBytes(),Base64.URL_SAFE|Base64.NO_WRAP);
+    		   return ret;
+    		 }
+
+		@Override
+		protected String doInBackground(String... arg0) {
+			// TODO Auto-generated method stub
+	        // Create a new HttpClient and Post Header
+			String result = null;
+	        DefaultHttpClient httpclient = new DefaultHttpClient();
+	        HttpPost httppost = new HttpPost("https://api.bukalapak.com/v1/authenticate.json");
+	        
+	        try {
+	            // Execute HTTP Post Request
+	        	httppost.setHeader("Accept", "application/json");
+		        httppost.setHeader("User-Agent", "Apache-HttpClient/4.1 (java 1.5)");
+		        httppost.setHeader("Authorization",getB64Auth("rizkivmaster","18091992gnome"));
+	            HttpResponse response = httpclient.execute(httppost);
+	            result =  parse(response.getEntity().getContent());
+	        } catch (ClientProtocolException e) {
+	            // TODO Auto-generated catch block
+	        } catch (IOException e) {
+	            // TODO Auto-generated catch block
+	        } 
+			return result;
+		}
+		
+		@Override
+		protected void onPostExecute(String result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+			JSONObject json = new JSONObject(result);
+			String status = json.getString("status");
+		}
+    	
+    }
+    
+    public String parse(InputStream is)
+    {
+    	BufferedReader reader = null;
+		try {
+			reader = new BufferedReader(new InputStreamReader(
+			        is, "iso-8859-1"), 8);
+		} catch (UnsupportedEncodingException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+        StringBuilder sb = new StringBuilder();
+        String line = null;
+        try {
+			while ((line = reader.readLine()) != null) {
+			    sb.append(line);
+			}
+		
+        is.close();
+        } 
+        catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        String response = sb.toString();
+        return response;
+    }
+    
+}

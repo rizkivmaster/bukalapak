@@ -5,41 +5,48 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
-import java.net.Authenticator;
-import java.net.HttpURLConnection;
-import java.net.PasswordAuthentication;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ThreadFactory;
 
 import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.AbstractHttpEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.protocol.HTTP;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.opengl.Visibility;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.app.Activity;
 import android.util.Base64;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
+@SuppressLint("ShowToast")
 public class MainActivity extends Activity {
-
+	ProgressBar progress;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        new PostData().execute("test");
+        final EditText userText = (EditText) findViewById(R.id.editText1);
+        final EditText passText = (EditText) findViewById(R.id.editText2);
+        progress = (ProgressBar) findViewById(R.id.progressBar1);
+        Button submitBtn = (Button) findViewById(R.id.button1);
+        submitBtn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				new PostData().execute(userText.getText().toString(),passText.getText().toString());
+			}
+		});
+        
     }
 
     @Override
@@ -58,6 +65,13 @@ public class MainActivity extends Activity {
     		   return ret;
     		 }
 
+    	@Override
+    	protected void onPreExecute() {
+    		// TODO Auto-generated method stub
+    		super.onPreExecute();
+    		progress.setVisibility(ProgressBar.VISIBLE);
+    		
+    	}
 		@Override
 		protected String doInBackground(String... arg0) {
 			// TODO Auto-generated method stub
@@ -70,7 +84,7 @@ public class MainActivity extends Activity {
 	            // Execute HTTP Post Request
 	        	httppost.setHeader("Accept", "application/json");
 		        httppost.setHeader("User-Agent", "Apache-HttpClient/4.1 (java 1.5)");
-		        httppost.setHeader("Authorization",getB64Auth("rizkivmaster","18091992gnome"));
+		        httppost.setHeader("Authorization",getB64Auth(arg0[0],arg0[1]));
 	            HttpResponse response = httpclient.execute(httppost);
 	            result =  parse(response.getEntity().getContent());
 	        } catch (ClientProtocolException e) {
@@ -85,8 +99,29 @@ public class MainActivity extends Activity {
 		protected void onPostExecute(String result) {
 			// TODO Auto-generated method stub
 			super.onPostExecute(result);
-			Log.i("Test", result);
-            Log.e("Hello", "just test");
+			progress.setVisibility(ProgressBar.GONE);
+			JSONObject json;
+			try {
+				json = new JSONObject(result);
+				String status = json.getString("status");
+
+				if(status.equals("OK"))
+				{
+					String userid = json.getString("user_id");
+					String secret = json.getString("token"); 
+					Toast.makeText(MainActivity.this,"Login berhasil dengan key "+userid+" dan secret "+secret, Toast.LENGTH_LONG).show();
+					Log.e("Sukses", "Login berhasil dengan key "+userid+" dan secret "+secret);
+				}
+				else
+				{
+					String pesan = json.getString("message");
+					Toast.makeText(MainActivity.this, pesan, Toast.LENGTH_LONG).show();
+					Log.e("Gagal", pesan);
+				}
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
     	
     }
