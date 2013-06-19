@@ -1,0 +1,5 @@
+INDEX VERSION 1.126+D:\KERJA PRAKTIK\bukalapak\.metadata\.plugins\org.eclipse.jdt.core
+1984211775.index
+1392409500.index
+3343411758.index
+2170623519.index
