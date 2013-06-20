@@ -1,6 +1,10 @@
 package controller;
 
 import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -18,15 +22,29 @@ import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.FileEntity;
+import org.apache.http.entity.InputStreamEntity;
+import org.apache.http.entity.ByteArrayEntity;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.entity.mime.HttpMultipartMode;
+import org.apache.http.entity.mime.MultipartEntity;
+import org.apache.http.entity.mime.content.FileBody;
+import org.apache.http.entity.mime.content.InputStreamBody;
+import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Bitmap.CompressFormat;
+import android.graphics.BitmapFactory;
+import android.graphics.ImageFormat;
+import android.graphics.drawable.BitmapDrawable;
+import android.provider.MediaStore.Images;
 import android.util.Base64;
 import android.util.Log;
 import android.widget.Toast;
@@ -98,7 +116,7 @@ public class APIController {
 		return null;
 	}
 	
-	public void createProduct() throws Exception
+	public void createProduct(String img) throws Exception
 	{
 		JSONObject json = new JSONObject();
 		JSONObject product = new JSONObject();
@@ -112,12 +130,17 @@ public class APIController {
 		product.put("new", "true");
 		product.put("negotiable", "true");
 		json.put("product", product);
-		json.put("images", "2554836");
+		json.put("images", img);
 		specs.put("type", "Roadbike");
 		specs.put("brand", "Polygon");
 		specs.put("bahan", "Cromoly");
 		json.put("product_detail_attribute", specs);
 		JSONObject response = requestPost(userid, token,json, "products.json");
+	}
+	public JSONObject createImage(Bitmap bitmap) throws Exception
+	{
+		JSONObject response = sendImage(userid, token,bitmap, "images.json");
+		return response;
 	}
 	
 //	public Product readProduct()
@@ -137,7 +160,35 @@ public class APIController {
 	/////////////////////////TRANSACTIONS API/////////////////////////////////////
 	
 	
-	
+	public JSONObject sendImage(String userid,String token,Bitmap bitmap,String suburl) throws Exception
+	{
+		JSONObject result = null;
+        DefaultHttpClient httpclient = new DefaultHttpClient();
+        HttpPost httppost = new HttpPost(url+suburl);
+        // Execute HTTP Post Request
+//        httppost.setHeader("Content-Type", "application/json");
+//        httppost.setHeader("Accept", "application/json");
+        httppost.setHeader("Authorization",getB64Auth(userid,token));
+		MultipartEntity entity = new MultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE);
+		if(bitmap!=null)
+		{	
+			
+			ByteArrayOutputStream stream = new ByteArrayOutputStream();
+			bitmap.compress(CompressFormat.JPEG, 100, stream);
+			InputStream is = new ByteArrayInputStream(stream.toByteArray());
+			entity.addPart("file", new InputStreamBody(is, "file"));
+			httppost.setEntity(entity);
+		}
+		HttpResponse response = httpclient.execute(httppost);
+        String temp = parse(response.getEntity().getContent());
+        result =  new JSONObject(temp);
+        String status = result.getString("status");
+        if(status.equals("ERROR"))
+		{
+			throw new Exception(result.getString("message"));
+		}
+        return result;
+	}
 	public JSONObject requestPost(String userid,String token,JSONObject json,String suburl) throws Exception
 	{
 		JSONObject result = null;

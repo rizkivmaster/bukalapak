@@ -1,5 +1,10 @@
 package view;
 
+import java.io.IOException;
+import java.io.InputStream;
+
+import org.json.JSONObject;
+
 import view.MainActivity.PostData;
 import view.MainActivity.Test;
 
@@ -14,6 +19,10 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.AssetManager;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.util.Log;
 import android.view.Menu;
 import android.widget.ProgressBar;
@@ -61,18 +70,60 @@ public class TestingView extends Activity {
 
 	class Test extends AsyncTask<String, String, String>
     {
-
+		
 		@Override
 		protected String doInBackground(String... params) {
 			// TODO Auto-generated method stub
 			APIController api = new APIController(getApplicationContext());
+			String result = null;
+			InputStream is;
 			try {
-				api.createProduct();
+				is = getAssets().open("sepeda.jpg");
+				Bitmap bm = BitmapFactory.decodeStream(is);
+				JSONObject response =  api.createImage(bm);
+				result = response.getString("id");
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			return null;
+			return result;
+		}
+		@Override
+		protected void onPostExecute(String result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+			new  TestUploadProduk().execute(result);
+		}
+    	
+    }
+	class TestUploadProduk extends AsyncTask<String, String, String>
+    {
+		
+		@Override
+		protected String doInBackground(String... params) {
+			// TODO Auto-generated method stub
+			APIController api = new APIController(getApplicationContext());
+			String result = null;
+			InputStream is;
+			try {
+				api.createProduct(params[0]);
+			} catch (IOException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return result;
+		}
+		@Override
+		protected void onPostExecute(String result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+			
 		}
     	
     }
