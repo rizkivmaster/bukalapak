@@ -1,0 +1,121 @@
+package com.example.bukalapaklogin;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.content.Context;
+import android.util.Base64;
+import android.widget.Toast;
+
+public class APIServer {
+	private String url = "https://api.bukalapak.com/v1/";
+	private String userid;
+	private String token;
+	private Context context;
+	public APIServer(Context con)
+	{
+		this.context = con;
+	}
+	
+	public APIServer(Context con, String username, String password)
+	{
+		this.context = con;
+		retrieveNewAccess(username, password);
+	}
+	
+	
+	
+	public void retrieveNewAccess(String user, String pwd) throws JSONException
+	{
+		JSONObject response = request(user, pwd, null, "authenticate.json");
+		String status = response.getString("status");
+		if(status.equals("OK"))
+		{
+			userid = response.getString("userid");
+			token = response.getString("token");
+		}
+		else if(status.equals("ERROR"))
+		{
+			Toast.makeText(context,response.getString("message"), Toast.LENGTH_LONG).show();
+		}
+	}
+	
+	public JSONObject retrieveProducts(String query, int page, int perpage) throws JSONException
+	{
+		String params = "?page="+page+"&perpage="+perpage;
+		if(query!=null&&!query.isEmpty()) params+="&query="+query;
+		JSONObject response = request(userid, token,null, "products.json"+params);
+		return response;
+	}
+	
+	public JSONObject request(String userid,String token,String json,String suburl) throws JSONException
+	{
+		String result = null;
+        DefaultHttpClient httpclient = new DefaultHttpClient();
+        HttpPost httppost = new HttpPost(url+suburl);
+        
+        try {
+            // Execute HTTP Post Request
+        	httppost.setHeader("Accept", "application/json");
+	        httppost.setHeader("User-Agent", "Apache-HttpClient/4.1 (java 1.5)");
+	        httppost.setHeader("Authorization",getB64Auth(userid,token));
+	        List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(2);
+			if(json!=null&&!json.isEmpty())nameValuePairs.add(new BasicNameValuePair("json", json));
+	        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
+            HttpResponse response = httpclient.execute(httppost);
+            result =  parse(response.getEntity().getContent());
+        } catch (ClientProtocolException e) {
+            // TODO Auto-generated catch block
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+        } 
+        return new JSONObject(result);
+	}
+	
+	private String parse(InputStream is)
+    {
+    	BufferedReader reader = null;
+		try {
+			reader = new BufferedReader(new InputStreamReader(is, "iso-8859-1"), 8);
+		} catch (UnsupportedEncodingException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+        StringBuilder sb = new StringBuilder();
+        String line = null;
+        try {
+			while ((line = reader.readLine()) != null) {
+			    sb.append(line);
+			}
+		
+        is.close();
+        } 
+        catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        String response = sb.toString();
+        return response;
+    }
+	private String getB64Auth (String login, String pass) {
+	   String source=login+":"+pass;
+	   String ret="Basic "+Base64.encodeToString(source.getBytes(),Base64.URL_SAFE|Base64.NO_WRAP);
+	   return ret;
+	}
+}

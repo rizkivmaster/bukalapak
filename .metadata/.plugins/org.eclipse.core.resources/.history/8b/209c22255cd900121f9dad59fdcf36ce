@@ -1,0 +1,6 @@
+package model;
+
+public class Product {
+	HashMap<String,String> attributes;
+	String id;
+}

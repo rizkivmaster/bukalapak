@@ -1,0 +1,13 @@
+package controller;
+import model.*;
+
+
+public class MainController {
+	static User activeUser;
+	
+	public static boolean login(String username, String password)
+	{
+		
+	}
+	public static void
+}

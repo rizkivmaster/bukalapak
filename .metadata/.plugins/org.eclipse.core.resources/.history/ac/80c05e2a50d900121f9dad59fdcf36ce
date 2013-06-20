@@ -1,0 +1,8 @@
+package controller;
+import model.*;
+
+
+public class MainController {
+	static User activeUser;
+	
+}

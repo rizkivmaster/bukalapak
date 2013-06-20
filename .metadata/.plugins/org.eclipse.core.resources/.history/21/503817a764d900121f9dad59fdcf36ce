@@ -1,0 +1,18 @@
+import java.util.Iterator;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+
+public class Test {
+	public static void main(String[] arg) throws JSONException
+	{
+		String source = "{'status':'OK'}";
+		JSONObject obj = new JSONObject(source);
+		Iterator iter = obj.keys();
+		while(iter.hasNext())
+		{
+			System.out.println(iter.toString());
+		}
+	}
+}

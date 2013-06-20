@@ -1,0 +1,20 @@
+package controller;
+import android.app.Activity;
+import android.content.Context;
+import model.*;
+
+
+public class MainController {
+	static APIController api;
+	
+	public static boolean login(Activity activity,String username, String password)
+	{
+		api = new APIController(activity,username, password);
+		if(api.isActive())
+		{
+			activity.finish();
+		}
+	}
+	
+	public static
+}

@@ -1,0 +1,12 @@
+package controller;
+import model.*;
+
+
+public class MainController {
+	static User activeUser;
+	
+	public static void login()
+	{
+		
+	}
+}

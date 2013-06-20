@@ -1,0 +1,16 @@
+package controller;
+import android.content.Context;
+import model.*;
+
+
+public class MainController {
+	static User activeUser;
+	static APIController apil
+	
+	public static boolean login(Context context,String username, String password)
+	{
+		
+	}
+	
+	public static
+}

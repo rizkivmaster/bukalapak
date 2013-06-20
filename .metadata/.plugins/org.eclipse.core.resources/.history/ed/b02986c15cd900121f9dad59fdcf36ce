@@ -1,0 +1,18 @@
+package model;
+
+import java.util.HashMap;
+import java.util.List;
+
+import android.graphics.Bitmap;
+
+public class Product {
+	HashMap<String,String> attributes;
+	String id;
+	List<Bitmap> images;
+	
+	public Product(String id,HashMap<String,String> attr, List<Bitmap> images)
+	{
+		this.id = id;
+		
+	}
+}

@@ -1,0 +1,5 @@
+package com.example.bukalapaklogin;
+
+public class MainController {
+	static User;
+}

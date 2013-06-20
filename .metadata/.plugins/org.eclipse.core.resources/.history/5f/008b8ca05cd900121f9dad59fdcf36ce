@@ -1,0 +1,14 @@
+package model;
+
+import android.graphics.Bitmap;
+
+public class Product {
+	HashMap<String,String> attributes;
+	String id;
+	List<Bitmap> images;
+	
+	public Product(String id)
+	{
+		categor
+	}
+}

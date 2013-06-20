@@ -1,0 +1,28 @@
+package controller;
+import org.json.JSONException;
+
+import view.Berhasil;
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import model.*;
+
+
+public class MainController {
+	static APIController api;
+	
+	public static void login(Activity activity,String username, String password)
+	{
+		try {
+			api = new APIController(activity,username, password);
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if(api.isActive())
+		{
+			new Intent(activity,Berhasil.class);
+			activity.finish();
+		}
+	}
+}

@@ -1,0 +1,26 @@
+package controller;
+import org.json.JSONException;
+
+import view.Berhasil;
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.widget.Toast;
+import model.*;
+
+
+public class MainController {
+	static APIController api;
+	public static void login(Activity activity,String username, String password)
+	{
+		try {
+			api = new APIController(activity,username, password);
+			Toast.makeText(activity, "Login berhasil", Toast.LENGTH_LONG).show();
+			new Intent(activity,Berhasil.class);
+			activity.finish();
+		} catch (Exception e) {
+			Toast.makeText(activity, e.getMessage(), Toast.LENGTH_LONG).show();
+		}
+	}
+	
+}

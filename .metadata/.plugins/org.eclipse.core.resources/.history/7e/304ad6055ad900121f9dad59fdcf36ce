@@ -1,0 +1,111 @@
+package view;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import com.example.bukalapaklogin.R;
+
+import controller.APIController;
+import controller.AsyncTaskResult;
+import controller.MainController;
+
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Intent;
+import android.opengl.Visibility;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.util.Base64;
+import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+
+@SuppressLint("ShowToast")
+public class MainActivity extends Activity {
+	ProgressBar progress;
+	EditText userText;
+    EditText passText;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        userText = (EditText) findViewById(R.id.editText1);
+        passText = (EditText) findViewById(R.id.editText2);
+        progress = (ProgressBar) findViewById(R.id.progressBar1);
+        Button submitBtn = (Button) findViewById(R.id.button1);
+        submitBtn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				new PostData().execute();
+			}
+		});
+        
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.activity_main, menu);
+        return true;
+    }
+    
+    
+    class PostData extends AsyncTask<String, AsyncTaskResult<String>, AsyncTaskResult<String>>
+    {
+    	APIController api;
+    	@Override
+    	protected void onPreExecute() {
+    		// TODO Auto-generated method stub
+    		super.onPreExecute();
+    		progress.setVisibility(ProgressBar.VISIBLE);
+    	}
+		@Override
+		protected AsyncTaskResult<String> doInBackground(String... arg0) {
+			// TODO Auto-generated method stub
+	        // Create a new HttpClient and Post Header
+			String username = userText.getText().toString();
+			String password = passText.getText().toString();
+			try {
+				api = new APIController(getApplicationContext(),username,password);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				return new AsyncTaskResult<String>(e);
+			}
+			return new AsyncTaskResult<String>("");
+		}
+		
+		protected void onPostExecute(AsyncTaskResult<String> result) {
+			// TODO Auto-generated method stub
+			super.onPostExecute(result);
+			if(result.getError()!=null)
+			{
+				Toast.makeText(getApplicationContext(), result.getError().getMessage(), Toast.LENGTH_LONG).show();
+			}
+			else
+			{
+				Toast.makeText(getApplicationContext(), ", Toast.LENGTH_LONG).show();" +
+				new Intent(activity,Berhasil.class);
+				activity.finish();
+			}
+			progress.setVisibility(ProgressBar.GONE);
+		}
+			
+    }
+    
+}
