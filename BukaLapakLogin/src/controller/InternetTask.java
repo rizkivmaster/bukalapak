@@ -1,10 +1,12 @@
 package controller;
 
+import java.io.Serializable;
+
 import org.apache.http.HttpRequest;
 import org.apache.http.client.methods.HttpUriRequest;
 import org.json.JSONObject;
 
-public class InternetTask implements Comparable<InternetTask> {
+public class InternetTask implements Comparable<InternetTask>{
 	private HttpUriRequest request;
 	private NetworkListener networkListener;
 	private APIListener apiListener;
@@ -49,21 +51,13 @@ public class InternetTask implements Comparable<InternetTask> {
 		{
 			apiListener.onHold();
 		}
-		if(networkListener!=null)
-		{
-			networkListener.onHold();
-		}
 	}
 	
 	public void tellStart()
 	{
 		if(apiListener!=null)
 		{
-			apiListener.onStart();
-		}
-		if(networkListener!=null)
-		{
-			networkListener.onStart();
+			apiListener.onExecute();
 		}
 	}
 	
@@ -71,7 +65,7 @@ public class InternetTask implements Comparable<InternetTask> {
 	{
 		if(apiListener!=null)
 		{
-			apiListener.onResult(res,e);
+			apiListener.onSuccess(res, e);
 		}
 	}
 	
@@ -79,7 +73,15 @@ public class InternetTask implements Comparable<InternetTask> {
 	{
 		if(networkListener!=null)
 		{
-			networkListener.onFinish(res);
+			networkListener.onGivingResult(res);
+		}
+	}
+	
+	public void tellEnqueued()
+	{
+		if(apiListener!=null)
+		{
+			apiListener.onEnqueue();
 		}
 	}
 	

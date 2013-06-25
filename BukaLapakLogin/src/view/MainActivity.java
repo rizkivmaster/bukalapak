@@ -67,7 +67,7 @@ public class MainActivity extends Activity {
 					api.retrieveNewAccess(username,password , new APIListener() {
 
 						@Override
-						public void onResult(Object res, Exception e) {
+						public void onSuccess(Object res, Exception e) {
 							progress.setVisibility(ProgressBar.GONE);
 							if(e==null)
 								startActivity(new Intent(MainActivity.this,Berhasil.class));
@@ -82,7 +82,7 @@ public class MainActivity extends Activity {
 						}
 
 						@Override
-						public void onStart() {
+						public void onExecute() {
 							progress.setVisibility(ProgressBar.VISIBLE);
 							// TODO Auto-generated method stub
 							

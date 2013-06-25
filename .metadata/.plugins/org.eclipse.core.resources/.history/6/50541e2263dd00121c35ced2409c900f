@@ -1,0 +1,9 @@
+package controller;
+
+import org.json.JSONObject;
+
+public interface NetworkListener {
+	public abstract void onSuccess(JSONObject res);
+	public abstract void onFailure();
+	public abstract void onStart();
+}
