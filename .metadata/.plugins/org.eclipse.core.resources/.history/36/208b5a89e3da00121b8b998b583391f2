@@ -1,0 +1,7 @@
+package controller;
+
+public interface UploadListener {
+	public abstract void onFinish();
+	public abstract void onHold();
+
+}

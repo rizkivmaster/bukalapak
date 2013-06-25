@@ -1,0 +1,64 @@
+package view;
+
+import java.util.List;
+
+import com.example.bukalapaklogin.R;
+
+import model.Product;
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+class ProductItemAdapter extends BaseAdapter {
+
+	private Context mContext;
+	private List<Product> mListProduct;
+
+	public ProductItemAdapter(Context c, List<Product> list) {
+		mContext = c;
+		mListProduct = list;
+	}
+
+	@Override
+	public View getView(int arg0, View arg1, ViewGroup arg2) {
+		Product entry = mListProduct.get(arg0);
+		if (arg1 == null) {
+			LayoutInflater inflater = LayoutInflater.from(mContext);
+			arg1 = inflater.inflate(R.layout.product_listitem_layout, null);
+		}
+//		ImageView thumb = (ImageView) arg1.findViewById(R.id.productThumb);
+//		thumb.setImageBitmap(entry.getImages().get(0));
+
+		TextView name = (TextView) arg1.findViewById(R.id.productName);
+		name.setText(entry.getName());
+
+		TextView price = (TextView) arg1.findViewById(R.id.productPrice);
+		price.setText("Rp " + entry.getPrice());
+		
+		return arg1;
+	}
+
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return mListProduct.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+		// TODO Auto-generated method stub
+		return mListProduct.get(position);
+	}
+
+	@Override
+	public long getItemId(int position) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

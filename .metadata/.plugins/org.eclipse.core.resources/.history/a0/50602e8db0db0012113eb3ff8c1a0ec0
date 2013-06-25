@@ -1,0 +1,7 @@
+package controller;
+
+import org.json.JSONObject;
+
+public interface NetworkListener {
+	public abstract void onFinish(JSONObject res) throws Exception;
+}

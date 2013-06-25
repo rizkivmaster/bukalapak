@@ -1,0 +1,73 @@
+package view;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import model.Product;
+
+import com.example.bukalapaklogin.R;
+import com.example.bukalapaklogin.R.layout;
+import com.example.bukalapaklogin.R.menu;
+
+import controller.APIController;
+
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.widget.ListView;
+
+public class LapakActivity extends Activity {
+
+	private List<Product>  mListProduct;
+	private ProductItemAdapter adapter;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_lapak);
+		ListView productList = (ListView) findViewById(R.id.listProduct);
+		//buat list produk
+		mListProduct = new ArrayList<Product>();
+		//buat adapter
+		adapter = new ProductItemAdapter(this,mListProduct);
+		//set adapter
+		productList.setAdapter(adapter);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.activity_lapak, menu);
+		return true;
+	}
+	
+	//ASYNC TASK TO AVOID CHOKING UP UI THREAD DOWNLOAD STRING
+		private class BrowseTask extends AsyncTask<String, String, ArrayList<Product>> {
+		
+		    @Override
+		    protected void onPreExecute() {}
+		
+		    protected ArrayList<Product> doInBackground(String... param) {
+		    	APIController api = new APIController(getApplicationContext());
+		    	return api.listLapak(false, false);
+		    }
+		
+		    protected void onProgressUpdate(String... progress) {}
+		
+		    protected void onPostExecute(ArrayList<Product> ret) {
+		        if (ret != null) {
+					for (Product product : ret) {
+						mListProduct.add(product);	
+						(new ImageDownloader()).execute(product);
+					}
+				}
+		        if (adapter != null) {
+		                adapter.notifyDataSetChanged();
+		        }
+		    }
+		}
+	
+	
+
+}

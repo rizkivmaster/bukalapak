@@ -5,9 +5,6 @@ import java.io.InputStream;
 
 import org.json.JSONObject;
 
-import view.MainActivity.PostData;
-import view.MainActivity.Test;
-
 import com.example.bukalapaklogin.R;
 import com.example.bukalapaklogin.R.layout;
 import com.example.bukalapaklogin.R.menu;

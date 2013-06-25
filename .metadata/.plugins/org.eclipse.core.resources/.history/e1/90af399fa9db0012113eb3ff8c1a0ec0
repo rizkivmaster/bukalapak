@@ -1,0 +1,83 @@
+package controller;
+
+import org.apache.http.HttpRequest;
+import org.apache.http.client.methods.HttpUriRequest;
+import org.json.JSONObject;
+
+public class InternetTask implements Comparable<InternetTask> {
+	private HttpUriRequest request;
+	private APIListener aPIListener;
+	private AppListener appListener;
+	private int priority; 
+	
+	public HttpUriRequest getRequest() {
+		return request;
+	}
+
+	public void setRequest(HttpUriRequest request) {
+		this.request = request;
+	}
+
+	public int getPriority() {
+		return priority;
+	}
+
+	public void setPriority(int priority) {
+		this.priority = priority;
+	}
+
+	public void setNetworkListener(APIListener aPIListener) {
+		this.aPIListener = aPIListener;
+	}
+
+	public void setAppListener(AppListener appListener) {
+		this.appListener = appListener;
+	}
+
+	public InternetTask(HttpUriRequest r,int priority)
+	{
+		request = r;
+	}
+	
+	public void tellHold()
+	{
+		if(aPIListener!=null)
+		{
+			aPIListener.onHold();
+		}
+	}
+	
+	public void tellStart()
+	{
+		if(aPIListener!=null)
+		{
+			aPIListener.onStart();
+		}
+	}
+	
+	public void tellFinish(JSONObject res)
+	{
+		if(aPIListener!=null)
+		{
+			aPIListener.onFinish(res);
+		}
+	}
+	
+	public void cancelProcess()
+	{
+		if(request!=null)
+		{
+			request.abort();
+		}
+		if(appListener!=null)
+		{
+			appListener.onCancel();
+		}
+	}
+
+	@Override
+	public int compareTo(InternetTask arg0) {
+		// TODO Auto-generated method stub
+		return getPriority();
+	}
+}

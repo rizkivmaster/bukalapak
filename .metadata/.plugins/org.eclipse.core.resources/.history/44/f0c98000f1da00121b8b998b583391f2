@@ -1,0 +1,27 @@
+package view;
+
+import com.example.bukalapaklogin.R;
+import com.example.bukalapaklogin.R.layout;
+import com.example.bukalapaklogin.R.menu;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+
+public class LapakActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_lapak);
+		ListView list = (ListView) findViewById(R.id.listProductInSchedule);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.activity_lapak, menu);
+		return true;
+	}
+
+}

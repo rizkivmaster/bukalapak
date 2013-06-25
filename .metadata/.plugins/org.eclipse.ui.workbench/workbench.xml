@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="21" version="2.0">
+<workbench progressCount="26" version="2.0">
 <workbenchAdvisor/>
-<window height="728" maximized="true" width="1024" x="25" y="0">
+<window height="728" maximized="true" width="964" x="591" y="168">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="250"/>
@@ -18,7 +18,7 @@
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
@@ -42,6 +42,34 @@
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
+<part id="11"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
+<part id="19"/>
+<part id="20"/>
+<part id="21"/>
+<part id="22"/>
+<part id="23"/>
+<part id="24"/>
+<part id="25"/>
+<part id="26"/>
+<part id="27"/>
+<part id="28"/>
+<part id="29"/>
+<part id="30"/>
+<part id="31"/>
+<part id="32"/>
 </presentation>
 </folder>
 </info>
@@ -49,21 +77,127 @@
 <editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main.xml" partName="activity_main.xml" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/res/layout/activity_main.xml" title="activity_main.xml" tooltip="BukaLapakLogin/res/layout/activity_main.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/res/layout/activity_main.xml"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="ClassLoader.class" partName="ClassLoader.class" title="ClassLoader.class" tooltip="java.lang.ClassLoader" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=BukaLapakLogin/C:\/Program Files \(x86)\/adt-bundle-windows\/sdk\/platforms\/android-14\/android.jar&lt;java.lang(ClassLoader.class"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="APIServer.java" partName="APIServer.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/com/example/bukalapaklogin/APIServer.java" title="APIServer.java" tooltip="BukaLapakLogin/src/com/example/bukalapaklogin/APIServer.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/com/example/bukalapaklogin/APIServer.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2620" selectionTopPixel="420"/>
-</editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NetworkTools.java" partName="NetworkTools.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/com/example/bukalapaklogin/NetworkTools.java" title="NetworkTools.java" tooltip="BukaLapakLogin/src/com/example/bukalapaklogin/NetworkTools.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/com/example/bukalapaklogin/NetworkTools.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="738" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" partName="MainActivity.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/com/example/bukalapaklogin/MainActivity.java" title="MainActivity.java" tooltip="BukaLapakLogin/src/com/example/bukalapaklogin/MainActivity.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/com/example/bukalapaklogin/MainActivity.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1403" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Product.java" partName="Product.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/model/Product.java" title="Product.java" tooltip="BukaLapakLogin/src/model/Product.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/model/Product.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="User.java" partName="User.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/model/User.java" title="User.java" tooltip="BukaLapakLogin/src/model/User.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/model/User.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="73" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Buyer.java" partName="Buyer.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/model/Buyer.java" title="Buyer.java" tooltip="BukaLapakLogin/src/model/Buyer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/model/Buyer.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Seller.java" partName="Seller.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/model/Seller.java" title="Seller.java" tooltip="BukaLapakLogin/src/model/Seller.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/model/Seller.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="76" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Message.java" partName="Message.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/model/Message.java" title="Message.java" tooltip="BukaLapakLogin/src/model/Message.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/model/Message.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Transaction.java" partName="Transaction.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/model/Transaction.java" title="Transaction.java" tooltip="BukaLapakLogin/src/model/Transaction.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/model/Transaction.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="51" selectionTopPixel="0"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_berhasil.xml" partName="activity_berhasil.xml" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/res/layout/activity_berhasil.xml" title="activity_berhasil.xml" tooltip="BukaLapakLogin/res/layout/activity_berhasil.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/res/layout/activity_berhasil.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" partName="BukaLapakLogin Manifest" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/AndroidManifest.xml" title="BukaLapakLogin Manifest" tooltip="BukaLapakLogin/AndroidManifest.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/AndroidManifest.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AsyncTaskResult.java" partName="AsyncTaskResult.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/controller/AsyncTaskResult.java" title="AsyncTaskResult.java" tooltip="BukaLapakLogin/src/controller/AsyncTaskResult.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/controller/AsyncTaskResult.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="40" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="APIController.java" partName="APIController.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/controller/APIController.java" title="APIController.java" tooltip="BukaLapakLogin/src/controller/APIController.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/controller/APIController.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5298" selectionTopPixel="1620"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" partName="Test.java" path="D:/KERJA PRAKTIK/bukalapak/JASON/src/Test.java" title="Test.java" tooltip="JASON/src/Test.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/JASON/src/Test.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="332" selectionTopPixel="0"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_testing_view.xml" partName="activity_testing_view.xml" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/res/layout/activity_testing_view.xml" title="activity_testing_view.xml" tooltip="BukaLapakLogin/res/layout/activity_testing_view.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/res/layout/activity_testing_view.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestingView.java" partName="TestingView.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/view/TestingView.java" title="TestingView.java" tooltip="BukaLapakLogin/src/view/TestingView.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/view/TestingView.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="104" selectionTopPixel="0"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main.xml" partName="activity_main.xml" path="D:/KERJA PRAKTIK/bukalapak/TestCrop/res/layout/activity_main.xml" title="activity_main.xml" tooltip="TestCrop/res/layout/activity_main.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TestCrop/res/layout/activity_main.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" partName="MainActivity.java" path="D:/KERJA PRAKTIK/bukalapak/TestCrop/src/com/example/testcrop/MainActivity.java" title="MainActivity.java" tooltip="TestCrop/src/com/example/testcrop/MainActivity.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TestCrop/src/com/example/testcrop/MainActivity.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3081" selectionTopPixel="942"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="APIService.java" partName="APIService.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/service/APIService.java" title="APIService.java" tooltip="BukaLapakLogin/src/service/APIService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/service/APIService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="10732" selectionTopPixel="4302"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InternetTask.java" partName="InternetTask.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/controller/InternetTask.java" title="InternetTask.java" tooltip="BukaLapakLogin/src/controller/InternetTask.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/controller/InternetTask.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1082" selectionTopPixel="522"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="APIListener.java" partName="APIListener.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/controller/APIListener.java" title="APIListener.java" tooltip="BukaLapakLogin/src/controller/APIListener.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/controller/APIListener.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="122" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="APIPriority.java" partName="APIPriority.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/controller/APIPriority.java" title="APIPriority.java" tooltip="BukaLapakLogin/src/controller/APIPriority.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/controller/APIPriority.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="96" selectionTopPixel="0"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="product_listitem_layout.xml" partName="product_listitem_layout.xml" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/res/layout/product_listitem_layout.xml" title="product_listitem_layout.xml" tooltip="BukaLapakLogin/res/layout/product_listitem_layout.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/res/layout/product_listitem_layout.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_lapak.xml" partName="activity_lapak.xml" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/res/layout/activity_lapak.xml" title="activity_lapak.xml" tooltip="BukaLapakLogin/res/layout/activity_lapak.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/res/layout/activity_lapak.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LapakActivity.java" partName="LapakActivity.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/view/LapakActivity.java" title="LapakActivity.java" tooltip="BukaLapakLogin/src/view/LapakActivity.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/view/LapakActivity.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="912" selectionTopPixel="58"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ProductItemAdapter.java" partName="ProductItemAdapter.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/view/ProductItemAdapter.java" title="ProductItemAdapter.java" tooltip="BukaLapakLogin/src/view/ProductItemAdapter.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/view/ProductItemAdapter.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="899" selectionTopPixel="270"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AppListener.java" partName="AppListener.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/controller/AppListener.java" title="AppListener.java" tooltip="BukaLapakLogin/src/controller/AppListener.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/controller/AppListener.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="52" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UploadStatus.java" partName="UploadStatus.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/controller/UploadStatus.java" title="UploadStatus.java" tooltip="BukaLapakLogin/src/controller/UploadStatus.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/controller/UploadStatus.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="66" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UnauthenticatedException.java" partName="UnauthenticatedException.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/controller/UnauthenticatedException.java" title="UnauthenticatedException.java" tooltip="BukaLapakLogin/src/controller/UnauthenticatedException.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/controller/UnauthenticatedException.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="88" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NetworkListener.java" partName="NetworkListener.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/controller/NetworkListener.java" title="NetworkListener.java" tooltip="BukaLapakLogin/src/controller/NetworkListener.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/controller/NetworkListener.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="183" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyScheduleReceiver.java" partName="MyScheduleReceiver.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/service/MyScheduleReceiver.java" title="MyScheduleReceiver.java" tooltip="BukaLapakLogin/src/service/MyScheduleReceiver.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/service/MyScheduleReceiver.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1216" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyStartServiceReceiver.java" partName="MyStartServiceReceiver.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/service/MyStartServiceReceiver.java" title="MyStartServiceReceiver.java" tooltip="BukaLapakLogin/src/service/MyStartServiceReceiver.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/service/MyStartServiceReceiver.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="369" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.ClassFileEditor" name="AsyncTask.class" partName="AsyncTask.class" title="AsyncTask.class" tooltip="android.os.AsyncTask" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=BukaLapakLogin/C:\/Program Files \(x86)\/adt-bundle-windows\/sdk\/platforms\/android-14\/android.jar&lt;android.os(AsyncTask.class"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" partName="MainActivity.java" path="D:/KERJA PRAKTIK/bukalapak/BukaLapakLogin/src/view/MainActivity.java" title="MainActivity.java" tooltip="BukaLapakLogin/src/view/MainActivity.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BukaLapakLogin/src/view/MainActivity.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2194" selectionTopPixel="390"/>
 </editor>
 </editors>
 <views>
@@ -72,16 +206,21 @@
 <viewState/>
 </view>
 <view id="com.android.ide.eclipse.ddms.views.ThreadView" partName="Threads"/>
-<view id="org.eclipse.cdt.debug.ui.executablesView" partName="Executables"/>
+<view id="org.eclipse.cdt.debug.ui.executablesView" partName="Executables">
+<viewState/>
+</view>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
 <view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
 <viewState/>
 </view>
 <view id="org.eclipse.debug.ui.VariableView" partName="Variables">
 <viewState/>
 </view>
-<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
+</view>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.cview.groupmacros="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
 <view id="com.android.ide.eclipse.ddms.views.HeapView" partName="Heap"/>
 <view id="com.android.ide.eclipse.ddms.views.LogCatView" partName="LogCat">
@@ -94,6 +233,7 @@
 <expanded>
 <category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings (50 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -103,38 +243,16 @@
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
 </view>
-<view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
-<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
-<customFilters userDefinedPatternsEnabled="false">
-<xmlDefinedFilters>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
-</xmlDefinedFilters>
-</customFilters>
-</viewState>
-</view>
 <view id="org.eclipse.ui.console.ConsoleView" partName="Console">
 <viewState/>
 </view>
 <view id="com.android.ide.eclipse.ddms.views.EmulatorControlView" partName="Emulator Control"/>
-<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
+<view id="org.eclipse.help.ui.HelpView" partName="Help">
+<viewState pageId="context-help-page"/>
+</view>
+<view id="org.eclipse.jdt.ui.SourceView" partName="Declaration">
+<viewState/>
+</view>
 <view id="com.android.ide.eclipse.ddms.views.AllocTrackerView" partName="Allocation Tracker"/>
 <view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
 </views>
@@ -266,19 +384,20 @@
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.jdt.ui.SourceView"/>
-<view id="com.android.ide.eclipse.ddms.views.LogCatView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
-<view id="org.eclipse.jdt.ui.PackageExplorer"/>
+<view id="com.android.ide.eclipse.ddms.views.LogCatView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.help.ui.HelpView"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
 <info folder="true" part="left">
-<folder activePageID="org.eclipse.jdt.ui.PackageExplorer" appearance="2" expanded="2">
-<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
+<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
@@ -286,21 +405,23 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@199c3566" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="left">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<folder activePageID="org.eclipse.help.ui.HelpView" appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="Help"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="250" ratioRight="750" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.74958813" ratioLeft="455" ratioRight="152" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.95" ratioLeft="589" ratioRight="31" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="com.android.ide.eclipse.ddms.views.LogCatView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
-<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
@@ -372,29 +493,41 @@
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="com.android.ide.eclipse.ddms.views.LogCatView"/>
+<view id="org.eclipse.debug.ui.VariableView"/>
+<view id="org.eclipse.debug.ui.BreakpointView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.TaskList"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.cdt.debug.ui.executablesView"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
-<view id="org.eclipse.debug.ui.VariableView"/>
-<view id="org.eclipse.debug.ui.BreakpointView"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.help.ui.HelpView"/>
 <fastViewBars/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.help.ui.HelpView" appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="Help"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.74959874" ratioLeft="467" ratioRight="156" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.9532258" ratioLeft="591" ratioRight="29" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.cdt.debug.ui.executablesView" label="Executables"/>
@@ -402,34 +535,37 @@
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
 <page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1073e644" ratio="0.5" ratioLeft="679" ratioRight="679" relationship="2" relative="org.eclipse.debug.internal.ui.ConsoleFolderView">&#x0A;<folder activePageID="com.android.ide.eclipse.ddms.views.LogCatView" appearance="2" expanded="2">&#x0A;<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
-</presentation>
-</folder>
-</info>
-<info part="org.eclipse.ui.editorss" ratio="0.4496788" ratioLeft="210" ratioRight="257" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info part="org.eclipse.ui.editorss" ratio="0.5550122" ratioLeft="227" ratioRight="182" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="com.android.ide.eclipse.ddms.views.LogCatView" appearance="2" expanded="2">
+<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.dsf.gdb.ui.tracecontrol.view" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="679" ratioRight="679" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="679" ratioRight="679" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.debug.ui.SignalsView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.ModuleView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
@@ -441,159 +577,158 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/BukaLapakLogin/src/com/example/bukalapaklogin/MainActivity.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/BukaLapakLogin/src/com/example/bukalapaklogin/APIServer.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/BukaLapakLogin/src/com/example/bukalapaklogin/NetworkTools.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/BukaLapakLogin/src/service/APIService.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/BukaLapakLogin/src/service/MyStartServiceReceiver.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/BukaLapakLogin/src/view/MainActivity.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/BukaLapakLogin/src/controller/APIListener.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/BukaLapakLogin/src/controller/APIController.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/BukaLapakLogin/src/controller/InternetTask.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/BukaLapakLogin/AndroidManifest.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/BukaLapakLogin/src/service/MyScheduleReceiver.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TestCrop/src/com/example/testcrop/MainActivity.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/BukaLapakLogin/src/controller/NetworkListener.java"/>
 </editors>
-<item historyLabel="NetworkTools.java" index="2">
+<item historyLabel="APIListener.java" index="3">
+<position info="not_deleted" x="122" y="0"/>
+</item>
+<item historyLabel="APIController.java" index="4">
+<position info="not_deleted" x="4756" y="0"/>
+</item>
+<item historyLabel="APIService.java" index="0">
+<position info="not_deleted" x="4687" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="2">
+<position info="not_deleted" x="2843" y="0"/>
+</item>
+<item historyLabel="APIListener.java" index="3">
+<position info="not_deleted" x="122" y="0"/>
+</item>
+<item historyLabel="APIController.java" index="4">
+<position info="not_deleted" x="5298" y="0"/>
+</item>
+<item historyLabel="APIService.java" index="0">
+<position info="not_deleted" x="4687" y="0"/>
+</item>
+<item historyLabel="APIService.java" index="0">
+<position info="not_deleted" x="9875" y="0"/>
+</item>
+<item historyLabel="APIService.java" index="0">
 <position/>
 </item>
-<item historyLabel="NetworkTools.java" index="2">
+<item historyLabel="MainActivity.java" index="2">
+<position info="not_deleted" x="2843" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="2">
+<position info="not_deleted" x="2441" y="0"/>
+</item>
+<item historyLabel="APIService.java" index="0">
+<position info="not_deleted" x="10737" y="0"/>
+</item>
+<item historyLabel="MainActivity.java" index="2">
+<position info="not_deleted" x="4291" y="0"/>
+</item>
+<item historyLabel="APIService.java" index="0">
 <position/>
 </item>
-<item historyLabel="NetworkTools.java" index="2">
+<item historyLabel="BukaLapakLogin Manifest" index="6"/>
+<item historyLabel="APIService.java" index="0">
 <position/>
 </item>
-<item historyLabel="NetworkTools.java" index="2">
+<item historyLabel="BukaLapakLogin Manifest" index="6"/>
+<item historyLabel="APIService.java" index="0">
 <position/>
 </item>
-<item historyLabel="NetworkTools.java" index="2">
+<item historyLabel="APIService.java" index="0">
 <position/>
 </item>
-<item historyLabel="MainActivity.java" index="0">
-<position info="not_deleted" x="1972" y="231"/>
+<item historyLabel="APIService.java" index="0">
+<position info="not_deleted" x="12453" y="0"/>
 </item>
-<item historyLabel="NetworkTools.java" index="2">
+<item historyLabel="MyScheduleReceiver.java" index="7">
+<position info="not_deleted" x="1216" y="0"/>
+</item>
+<item historyLabel="MyStartServiceReceiver.java" index="1">
+<position info="not_deleted" x="269" y="0"/>
+</item>
+<item historyLabel="MyScheduleReceiver.java" index="7">
+<position info="not_deleted" x="1216" y="0"/>
+</item>
+<item historyLabel="APIService.java" index="0">
 <position/>
 </item>
-<item historyLabel="MainActivity.java" index="0">
-<position info="not_deleted" x="1403" y="0"/>
+<item historyLabel="MyStartServiceReceiver.java" index="1">
+<position info="not_deleted" x="364" y="0"/>
 </item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1040" y="0"/>
-</item>
-<item historyLabel="NetworkTools.java" index="2">
+<item historyLabel="APIService.java" index="0">
 <position/>
 </item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1040" y="0"/>
-</item>
-<item historyLabel="NetworkTools.java" index="2">
+<item historyLabel="MyStartServiceReceiver.java" index="1">
 <position/>
 </item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1445" y="0"/>
+<item historyLabel="APIService.java" index="0">
+<position info="not_deleted" x="4500" y="0"/>
 </item>
-<item historyLabel="NetworkTools.java" index="2">
+<item historyLabel="MyStartServiceReceiver.java" index="1">
+<position info="not_deleted" x="740" y="0"/>
+</item>
+<item historyLabel="BukaLapakLogin Manifest" index="6"/>
+<item historyLabel="MyStartServiceReceiver.java" index="1">
+<position info="not_deleted" x="364" y="0"/>
+</item>
+<item historyLabel="APIService.java" index="0">
+<position info="not_deleted" x="10540" y="0"/>
+</item>
+<item historyLabel="MyStartServiceReceiver.java" index="1">
+<position info="not_deleted" x="267" y="0"/>
+</item>
+<item historyLabel="APIService.java" index="0">
 <position/>
 </item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1445" y="0"/>
+<item historyLabel="APIService.java" index="0">
+<position info="not_deleted" x="10331" y="558"/>
 </item>
-<item historyLabel="NetworkTools.java" index="2">
-<position/>
+<item historyLabel="BukaLapakLogin Manifest" index="6"/>
+<item historyLabel="APIService.java" index="0">
+<position info="not_deleted" x="2280" y="0"/>
 </item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1445" y="0"/>
+<item historyLabel="MyStartServiceReceiver.java" index="1">
+<position info="not_deleted" x="267" y="0"/>
 </item>
-<item historyLabel="NetworkTools.java" index="2">
-<position/>
+<item historyLabel="MainActivity.java" index="8">
+<position info="not_deleted" x="3081" y="0"/>
 </item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1445" y="0"/>
+<item historyLabel="MainActivity.java" index="2">
+<position info="not_deleted" x="2194" y="0"/>
 </item>
-<item historyLabel="NetworkTools.java" index="2">
-<position info="not_deleted" x="794" y="0"/>
+<item historyLabel="APIService.java" index="0">
+<position info="not_deleted" x="2280" y="0"/>
 </item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1445" y="0"/>
+<item historyLabel="NetworkListener.java" index="9">
+<position info="not_deleted" x="209" y="0"/>
 </item>
-<item historyLabel="NetworkTools.java" index="2">
-<position info="not_deleted" x="738" y="0"/>
+<item historyLabel="NetworkListener.java" index="9">
+<position info="not_deleted" x="168" y="0"/>
 </item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1445" y="0"/>
+<item historyLabel="NetworkListener.java" index="9">
+<position info="not_deleted" x="183" y="0"/>
 </item>
-<item historyLabel="APIServer.java" index="1">
-<position/>
+<item historyLabel="APIService.java" index="0">
+<position info="not_deleted" x="4430" y="0"/>
 </item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1072" y="0"/>
+<item historyLabel="APIService.java" index="0">
+<position info="not_deleted" x="2208" y="0"/>
 </item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1099" y="45"/>
+<item historyLabel="InternetTask.java" index="5">
+<position info="not_deleted" x="1053" y="0"/>
 </item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="2583" y="0"/>
+<item historyLabel="APIService.java" index="0">
+<position info="not_deleted" x="10609" y="0"/>
 </item>
-<item historyLabel="APIServer.java" index="1">
-<position/>
+<item historyLabel="InternetTask.java" index="5">
+<position info="not_deleted" x="1082" y="0"/>
 </item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1222" y="0"/>
-</item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1310" y="0"/>
-</item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1240" y="28"/>
-</item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1172" y="0"/>
-</item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1099" y="45"/>
-</item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1440" y="0"/>
-</item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1099" y="45"/>
-</item>
-<item historyLabel="APIServer.java" index="1">
-<position/>
-</item>
-<item historyLabel="APIServer.java" index="1">
-<position/>
-</item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="2503" y="0"/>
-</item>
-<item historyLabel="APIServer.java" index="1">
-<position/>
-</item>
-<item historyLabel="APIServer.java" index="1">
-<position/>
-</item>
-<item historyLabel="APIServer.java" index="1">
-<position/>
-</item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1736" y="1"/>
-</item>
-<item historyLabel="APIServer.java" index="1">
-<position/>
-</item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1749" y="13"/>
-</item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1694" y="0"/>
-</item>
-<item historyLabel="APIServer.java" index="1">
-<position/>
-</item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1632" y="0"/>
-</item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1631" y="0"/>
-</item>
-<item historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1792" y="0"/>
-</item>
-<item active="true" historyLabel="APIServer.java" index="1">
-<position info="not_deleted" x="1500" y="74"/>
+<item active="true" historyLabel="APIService.java" index="0">
+<position info="not_deleted" x="10609" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -601,6 +736,17 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<trimItem IMemento.internal.id="left"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="org.eclipse.debug.internal.ui.ToolsFolderView"/>
+<trimItem IMemento.internal.id="stickyFolderRight"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
+<trimItem IMemento.internal.id="right"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@199c3566"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -609,27 +755,55 @@
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.HeapStatus"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="org.eclipse.debug.internal.ui.ConsoleFolderView"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" tooltip="BukaLapakLogin/src/com/example/bukalapaklogin/MainActivity.java">
-<persistable path="/BukaLapakLogin/src/com/example/bukalapaklogin/MainActivity.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" tooltip="BukaLapakLogin/src/view/MainActivity.java">
+<persistable path="/BukaLapakLogin/src/view/MainActivity.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NetworkTools.java" tooltip="BukaLapakLogin/src/com/example/bukalapaklogin/NetworkTools.java">
-<persistable path="/BukaLapakLogin/src/com/example/bukalapaklogin/NetworkTools.java"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="AsyncTask.class" tooltip="android.os.AsyncTask">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=BukaLapakLogin/C:\/Program Files \(x86)\/adt-bundle-windows\/sdk\/platforms\/android-14\/android.jar&lt;android.os(AsyncTask.class"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="APIServer.java" tooltip="BukaLapakLogin/src/com/example/bukalapaklogin/APIServer.java">
-<persistable path="/BukaLapakLogin/src/com/example/bukalapaklogin/APIServer.java"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="JSONObject.class" tooltip="org.json.JSONObject">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=BukaLapakLogin/C:\/Program Files \(x86)\/adt-bundle-windows\/sdk\/platforms\/android-14\/android.jar&lt;org.json(JSONObject.class"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="BukaLapakLogin/AndroidManifest.xml">
-<persistable path="/BukaLapakLogin/AndroidManifest.xml"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="View.class" tooltip="android.view.View">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=BukaLapakLogin/C:\/Program Files \(x86)\/adt-bundle-windows\/sdk\/platforms\/android-14\/android.jar&lt;android.view(View.class"/>
 </file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ClassLoader.class" tooltip="java.lang.ClassLoader">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=BukaLapakLogin/C:\/Program Files \(x86)\/adt-bundle-windows\/sdk\/platforms\/android-14\/android.jar&lt;java.lang(ClassLoader.class"/>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="NetworkInfo.class" tooltip="android.net.NetworkInfo">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=BukaLapakLogin/C:\/Program Files \(x86)\/adt-bundle-windows\/sdk\/platforms\/android-14\/android.jar&lt;android.net(NetworkInfo.class"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_main.xml" tooltip="BukaLapakLogin/res/layout/activity_main.xml">
-<persistable path="/BukaLapakLogin/res/layout/activity_main.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="dsds.java" tooltip="BukaLapakLogin/src/service/dsds.java">
+<persistable path="/BukaLapakLogin/src/service/dsds.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="DefaultRequestDirector.class" tooltip="org.apache.http.impl.client.DefaultRequestDirector">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=BukaLapakLogin/C:\/Program Files \(x86)\/adt-bundle-windows\/sdk\/platforms\/android-14\/android.jar&lt;org.apache.http.impl.client(DefaultRequestDirector.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="InvocationTargetException.class" tooltip="java.lang.reflect.InvocationTargetException">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=BukaLapakLogin/C:\/Program Files \(x86)\/adt-bundle-windows\/sdk\/platforms\/android-14\/android.jar&lt;java.lang.reflect(InvocationTargetException.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Handler.class" tooltip="android.os.Handler">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=BukaLapakLogin/C:\/Program Files \(x86)\/adt-bundle-windows\/sdk\/platforms\/android-14\/android.jar&lt;android.os(Handler.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="f.java" tooltip="BukaLapakLogin/src/service/f.java">
+<persistable path="/BukaLapakLogin/src/service/f.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="My.java" tooltip="BukaLapakLogin/src/service/My.java">
+<persistable path="/BukaLapakLogin/src/service/My.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="Throwable.class" tooltip="java.lang.Throwable">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=BukaLapakLogin/C:\/Program Files \(x86)\/adt-bundle-windows\/sdk\/platforms\/android-14\/android.jar&lt;java.lang(Throwable.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="NetworkListener.java" tooltip="BukaLapakLogin/src/controller/NetworkListener.java">
+<persistable path="/BukaLapakLogin/src/controller/NetworkListener.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UnauthenticatedException.java" tooltip="BukaLapakLogin/src/controller/UnauthenticatedException.java">
+<persistable path="/BukaLapakLogin/src/controller/UnauthenticatedException.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UploadStatus.java" tooltip="BukaLapakLogin/src/controller/UploadStatus.java">
+<persistable path="/BukaLapakLogin/src/controller/UploadStatus.java"/>
 </file>
 </mruList>
 </workbench>

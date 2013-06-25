@@ -1,0 +1,70 @@
+package controller;
+
+import org.apache.http.client.methods.HttpUriRequest;
+import org.json.JSONObject;
+
+public class InternetTask implements Comparable<InternetTask> {
+	private HttpUriRequest request;
+	private NetworkListener networkListener;
+	private AppListener appListener;
+	private int priority; 
+	
+	public HttpUriRequest getRequest() {
+		return request;
+	}
+
+	public void setRequest(HttpUriRequest request) {
+		this.request = request;
+	}
+
+	public int getPriority() {
+		return priority;
+	}
+
+	public void setPriority(int priority) {
+		this.priority = priority;
+	}
+
+	public void setNetworkListener(NetworkListener networkListener) {
+		this.networkListener = networkListener;
+	}
+
+	public void setAppListener(AppListener appListener) {
+		this.appListener = appListener;
+	}
+
+	public InternetTask(HttpUriRequest r,int priority)
+	{
+		request = r;
+	}
+	
+	public void tellHold()
+	{
+		if(networkListener!=null)
+		{
+			networkListener.onHold();
+		}
+	}
+	
+	public void tellFinish(JSONObject res)
+	{
+		if(networkListener!=null)
+		{
+			networkListener.onFinish(res);
+		}
+	}
+	
+	public void cancelProcess()
+	{
+		if(appListener!=null)
+		{
+			appListener.onCancel();
+		}
+	}
+
+	@Override
+	public int compareTo(InternetTask arg0) {
+		// TODO Auto-generated method stub
+		return priority;
+	}
+}

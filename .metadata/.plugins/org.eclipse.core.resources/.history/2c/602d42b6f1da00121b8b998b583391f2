@@ -1,0 +1,57 @@
+package view;
+
+import model.Product;
+import android.content.Context;
+import android.view.View;
+import android.widget.ArrayAdapter;
+
+class ProductItemAdapter extends ArrayAdapter<Product> {
+
+	private Context mContext;
+	private List<Product> mListProduct;
+	
+	
+	public BrowseProductAdapter(Context c, List<Product> list){
+		mContext = c;
+		mListProduct =list;
+	}
+	
+	
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return mListProduct.size();
+	}
+
+	@Override
+	public Object getItem(int arg0) {
+		// TODO Auto-generated method stub
+		return mListProduct.get(arg0);
+	}
+
+	@Override
+	public long getItemId(int arg0) {
+		// TODO Auto-generated method stub
+		return arg0;
+	}
+
+	@Override
+	public View getView(int arg0, View arg1, ViewGroup arg2) {
+		// TODO Auto-generated method stub
+		Product entry = mListProduct.get(arg0);
+		if(arg1 == null){
+			LayoutInflater inflater = LayoutInflater.from(mContext);
+			arg1 = inflater.inflate(R.layout.layout_productinfo,null);
+		}
+		ImageView ivIcon = (ImageView) arg1.findViewById(R.id.icon);
+		ivIcon.setImageBitmap(entry.getImage());
+		
+		TextView tvName = (TextView) arg1.findViewById(R.id.nama);
+		tvName.setText(entry.getName());
+		
+		TextView tvPrice = (TextView) arg1.findViewById(R.id.price);
+		tvPrice.setText("Rp "+entry.getPrice());
+		return arg1;
+	}
+
+}

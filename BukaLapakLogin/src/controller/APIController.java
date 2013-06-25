@@ -7,7 +7,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 import model.Product;
@@ -20,7 +22,9 @@ import org.apache.http.entity.mime.HttpMultipartMode;
 import org.apache.http.entity.mime.MultipartEntity;
 import org.apache.http.entity.mime.content.InputStreamBody;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONArray;
 import org.json.JSONObject;
+import org.json.JSONTokener;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -87,12 +91,25 @@ public class APIController {
 	
 	public List<Product> listLapak(boolean available, boolean sold) throws Exception
 	{
+		ArrayList<Product> result = new ArrayList<Product>();
 		String params = "";
 		if(available && sold) params +="?available=true&sold=true";
 		else if(available) params +="?available=true";
 		else if(sold) params += "?sold=true";
 		JSONObject response = requestGet(userid, token,null, "products/mylapak.json"+params);
-		return null;
+		if(response.getString("status").equals("OK"))
+		{
+			JSONArray products = response.getJSONArray("products");
+			for(int ii = 0 ; ii < products.length();ii++){
+				JSONObject p = products.getJSONObject(ii);
+				String id = p.getString("id");
+				Product product = new Product(id);
+				product.setName(p.getString("name"));
+				product.setPrice(Integer.parseInt(p.getString("price")));
+				result.add(product);
+			}
+		}
+		return result;
 	}
 	
 	public void createProduct(String img) throws Exception
@@ -196,6 +213,7 @@ public class APIController {
 	    httppost.setHeader("Authorization",getB64Auth(userid,token));
         HttpResponse response = httpclient.execute(httppost);
         String temp = parse(response.getEntity().getContent());
+        Log.i("output", temp);
         result =  new JSONObject(temp);
         String status = result.getString("status");
         if(status.equals("ERROR"))

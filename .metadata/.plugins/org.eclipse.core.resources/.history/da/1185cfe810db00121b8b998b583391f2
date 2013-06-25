@@ -1,0 +1,8 @@
+package controller;
+
+import org.json.JSONObject;
+
+public interface UploadListener {
+	public abstract void onFinish(JSONObject res);
+	public abstract void onHold();
+}

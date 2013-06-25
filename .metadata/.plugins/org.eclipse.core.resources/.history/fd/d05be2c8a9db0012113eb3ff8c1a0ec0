@@ -1,0 +1,9 @@
+package controller;
+
+import org.json.JSONObject;
+
+public interface NetoworkListener {
+	public abstract void onFinish(Object res);
+	public abstract void onHold();
+	public abstract void onStart();
+}

@@ -1,0 +1,32 @@
+package view;
+
+import model.Product;
+import android.widget.ArrayAdapter;
+
+class ProductItemAdapter extends ArrayAdapter<Product> {
+
+	LineItemAdapter() {
+		super(ListProductInScheduleActivity.this,
+				R.layout.product_scheduled_row, model);
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		View row = convertView;
+		ListLineItem holder = null;
+
+		if (row == null) {
+			LayoutInflater inflater = getLayoutInflater();
+			row = inflater.inflate(R.layout.product_scheduled_row, parent,
+					false);
+			holder = new ListLineItem(row);
+			row.setTag(holder);
+		} else {
+			holder = (ListLineItem) row.getTag();
+		}
+
+		holder.populateFrom(model.get(position));
+		return (row);
+	}
+
+}

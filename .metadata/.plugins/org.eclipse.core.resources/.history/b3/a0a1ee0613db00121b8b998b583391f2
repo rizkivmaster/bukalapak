@@ -1,0 +1,7 @@
+package controller;
+
+public interface AppListener {
+	public abstract void onCancel();
+	public abstract void onPostpone();
+	public abstract void resumed();
+}

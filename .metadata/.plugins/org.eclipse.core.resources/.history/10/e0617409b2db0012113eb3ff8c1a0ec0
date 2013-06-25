@@ -1,0 +1,9 @@
+package controller;
+
+import org.json.JSONObject;
+
+public interface APIListener {
+	public abstract void onFinish(Object res) throws Exception;
+	public abstract void onHold();
+	public abstract void onStart();
+}
