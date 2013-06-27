@@ -1,0 +1,26 @@
+import java.util.PriorityQueue;
+
+
+public class Test {
+	public static void main(String[] arg)
+	{
+		PriorityQueue<Unit> units = new PriorityQueue<Test.Unit>();
+		units.add("Test1",1);
+		units.add("Test2",2);
+		units.add("Test3",2);
+	}
+	class Unit implements Comparable<Unit>{
+		public String field;
+		public int it;
+		@Override
+		public Unit(String field, int it) {
+			// TODO Auto-generated constructor stub
+			this.field = field;
+			this.it = it;
+		}
+		public int compareTo(Unit o) {
+			// TODO Auto-generated method stub
+			return it;
+		}
+	}
+}

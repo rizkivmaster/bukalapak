@@ -1,0 +1,31 @@
+package model;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+
+import android.graphics.Bitmap;
+
+public class Product {
+
+	private HashMap<String,String> specs;
+	private String id;
+	private String name;
+	private String category;
+	private LinkedList<String> category_structure;
+	private String city;
+	private String province;
+	private String[] images;
+	private String url;
+	private String desc;
+	private int price;
+	private String condition;
+	private String nego;
+	private String seller_name;
+	private boolean payment_ready;
+	public Product(String id)
+	{
+		this.id = id;
+	}
+		
+}

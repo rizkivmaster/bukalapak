@@ -14,6 +14,9 @@ import java.io.ObjectOutputStream;
 import java.io.StreamCorruptedException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.PriorityQueue;
 
 import model.Product;
@@ -70,6 +73,7 @@ public class APIService extends Service {
 		// inisiasi foreground
 		foregroundTask = null;
 		// kalau ada loginnan, load task ke queue
+		/*
 		if (true) {
 			try {
 				backgroundTasks = loadBackGroundProcess();
@@ -83,7 +87,7 @@ public class APIService extends Service {
 				// TODO Auto-generated catch block
 				Log.e("Error", e.getMessage());
 			}
-		}
+		}*/
 		processBackgroundTask();
 	}
 
@@ -95,7 +99,7 @@ public class APIService extends Service {
 	}
 
 	private void executeForegroundTask(InternetTask task) {
-		if (foregroundTask != task) {
+		if (foregroundTask!= null && foregroundTask != task) {
 			foregroundTask.cancelProcess();
 		}
 		foregroundTask = task;
@@ -211,14 +215,14 @@ public class APIService extends Service {
 	}
 
 	// /////////////////////////////AUTHENTICATION API//////////////////////
-	// ///LOGIN//////
+	// ///LOGIN////// HAS BEEN TESTED
 	public void retrieveNewAccess(String user, String pwd, APIListener l)
 			throws Exception {
 		// buat request baru
 		HttpUriRequest req = post(user, pwd, "authenticate.json");
 		// bundle internet tasj
 		final InternetTask task = new InternetTask(req,
-				APIPriority.FOREGROUND_TASK);
+				APIPriority.FOREGROUND_TASK,l);
 		// set network listenernya
 		task.setNetworkListener(new NetworkListener() {
 			@Override
@@ -240,7 +244,6 @@ public class APIService extends Service {
 				}
 			}
 		});
-		task.setAPIListener(l);
 		executeForegroundTask(task);
 	}
 
@@ -254,11 +257,11 @@ public class APIService extends Service {
 
 	// //////////////////////////////CATEGORY API//////////////////////////
 
-	// /////////////CATEGORY PART/////////
+	// /////////////CATEGORY PART///////// HAS BEEN TESTED
 	public void listCategory(APIListener l) {
 		HttpUriRequest req = get(userid, token, "categories.json");
 		final InternetTask task = new InternetTask(req,
-				APIPriority.FOREGROUND_TASK);
+				APIPriority.FOREGROUND_TASK,l);
 		task.setNetworkListener(new NetworkListener() {
 			@Override
 			public void onGivingResult(JSONObject res) {
@@ -277,12 +280,12 @@ public class APIService extends Service {
 		executeForegroundTask(task);
 	}
 
-	// ///////////ATTRIBUTE PART///////////
+	// ///////////ATTRIBUTE PART///////////HAS BEEN TESTED
 	public void listAttributes(APIListener l, String id) {
 		HttpUriRequest req = get(userid, token, "categories/" + id
 				+ "/attributes.json");
 		final InternetTask task = new InternetTask(req,
-				APIPriority.FOREGROUND_TASK);
+				APIPriority.FOREGROUND_TASK,l);
 		task.setNetworkListener(new NetworkListener() {
 			@Override
 			public void onGivingResult(JSONObject res) {
@@ -302,12 +305,11 @@ public class APIService extends Service {
 	}
 
 	// ///////////////////////////IMAGE API////////////////////////////////
-	// ////////UPLOAD IMAGE///////////////////
+	// ////////UPLOAD IMAGE///////////////////HAS BEEN TESTED
 	public void createImage(APIListener l, Bitmap image) throws Exception {
 		HttpUriRequest req = postWithImage(userid, token, "images.json", image);
 		final InternetTask task = new InternetTask(req,
-				APIPriority.UPLOAD_IMAGE_ACTION);
-		task.setAPIListener(l);
+				APIPriority.UPLOAD_IMAGE_ACTION,l);
 		task.setNetworkListener(new NetworkListener() {
 			@Override
 			public void onGivingResult(JSONObject res) {
@@ -328,13 +330,12 @@ public class APIService extends Service {
 	}
 
 	// ///////////////////////////PRODUCT API//////////////////////////////////
-	// ////////////////////UPLOAD PRODUCT///////////////////
+	// ////////////////////UPLOAD PRODUCT///////////////////HAS BEEN TESTED
 	public void createProduct(APIListener l, JSONObject json)
 			throws UnsupportedEncodingException {
 		HttpUriRequest req = postWithJSON(userid, token, "products.json", json);
 		final InternetTask task = new InternetTask(req,
-				APIPriority.UPLOAD_PRODUCT_ACTION);
-		task.setAPIListener(l);
+				APIPriority.UPLOAD_PRODUCT_ACTION,l);
 		task.setNetworkListener(new NetworkListener() {
 			@Override
 			public void onGivingResult(JSONObject res) {
@@ -360,8 +361,7 @@ public class APIService extends Service {
 		HttpUriRequest req = putWithJSON(userid, token, "products/" + id
 				+ ".json", json);
 		final InternetTask task = new InternetTask(req,
-				APIPriority.UPDATE_PRODUCT_ACTION);
-		task.setAPIListener(l);
+				APIPriority.UPDATE_PRODUCT_ACTION,l);
 		task.setNetworkListener(new NetworkListener() {
 			@Override
 			public void onGivingResult(JSONObject res) {
@@ -382,11 +382,10 @@ public class APIService extends Service {
 	}
 
 	// /////////////////////READ PRODUCT////////////////////
-	public void readProduct(APIListener l, String id) {
+	/*public void readProduct(APIListener l, String id) {
 		HttpUriRequest req = get(userid, token, "products/" + id + ".json");
 		final InternetTask task = new InternetTask(req,
-				APIPriority.FOREGROUND_TASK);
-		task.setAPIListener(l);
+				APIPriority.FOREGROUND_TASK,l);
 		task.setNetworkListener(new NetworkListener() {
 
 			@Override
@@ -410,14 +409,13 @@ public class APIService extends Service {
 			}
 		});
 		executeForegroundTask(task);
-	}
+	}*/
 
-	// /////////////////////SET SOLD/////////////////////////
+	// /////////////////////SET SOLD/////////////////////////HAS BEEN TESTED
 	public void setSoldProduct(APIListener l, String id) {
 		HttpUriRequest req = put(userid, token, "products/" + id + "/sold.json");
 		final InternetTask task = new InternetTask(req,
-				APIPriority.RELIST_PRODUCT_ACTION);
-		task.setAPIListener(l);
+				APIPriority.RELIST_PRODUCT_ACTION,l);
 		task.setNetworkListener(new NetworkListener() {
 			@Override
 			public void onGivingResult(JSONObject res) {
@@ -437,13 +435,12 @@ public class APIService extends Service {
 		executeBackgroundTask(task);
 	}
 
-	// ////////////////RELIST PRODUCT//////////////////////
+	// ////////////////RELIST PRODUCT//////////////////////HAS BEEN TESTED
 	public void relistProduct(APIListener l, String id) {
 		HttpUriRequest req = put(userid, token, "products/" + id
 				+ "/relist.json");
 		final InternetTask task = new InternetTask(req,
-				APIPriority.RELIST_PRODUCT_ACTION);
-		task.setAPIListener(l);
+				APIPriority.RELIST_PRODUCT_ACTION,l);
 		task.setNetworkListener(new NetworkListener() {
 			@Override
 			public void onGivingResult(JSONObject res) {
@@ -463,12 +460,11 @@ public class APIService extends Service {
 		executeBackgroundTask(task);
 	}
 
-	// /////////////////////DELETEPRODUCT////////////////////
+	// /////////////////////DELETEPRODUCT////////////////////HAS BEEN TESTED
 	public void deleteProduct(APIListener l, String id) {
 		HttpUriRequest req = delete(userid, token, "products/" + id + ".json");
 		final InternetTask task = new InternetTask(req,
-				APIPriority.DELETE_PRODUCT_ACTION);
-		task.setAPIListener(l);
+				APIPriority.DELETE_PRODUCT_ACTION,l);
 		task.setNetworkListener(new NetworkListener() {
 			@Override
 			public void onGivingResult(JSONObject res) {
@@ -488,7 +484,7 @@ public class APIService extends Service {
 		executeBackgroundTask(task);
 	}
 
-	// /////////////////////////LIST LAPAK///////////////////
+	// /////////////////////////LIST LAPAK///////////////////HAS BEEN TESTED
 	public void listLapak(APIListener l, boolean available, boolean sold)
 			throws Exception {
 		String params = "";
@@ -501,8 +497,7 @@ public class APIService extends Service {
 		HttpUriRequest req = get(userid, token, "products/mylapak.json"
 				+ params);
 		final InternetTask task = new InternetTask(req,
-				APIPriority.FOREGROUND_TASK);
-		task.setAPIListener(l);
+				APIPriority.FOREGROUND_TASK,l);
 		task.setNetworkListener(new NetworkListener() {
 			@Override
 			public void onGivingResult(JSONObject res) {
@@ -513,11 +508,7 @@ public class APIService extends Service {
 						JSONArray products = res.getJSONArray("products");
 						for (int ii = 0; ii < products.length(); ii++) {
 							JSONObject p = products.getJSONObject(ii);
-							String id = p.getString("id");
-							Product product = new Product(id);
-							product.setName(p.getString("name"));
-							product.setPrice(Integer.parseInt(p
-									.getString("price")));
+							Product product = parseJSONtoProduct(p);
 							result.add(product);
 						}
 						task.tellResult(result, null);
@@ -540,7 +531,7 @@ public class APIService extends Service {
 	}
 
 	// ///////////////////LIST PRODUCT///////////////////////////////////
-	public void listProduct(APIListener l, int page, int per_page, String q)
+/*	public void listProduct(APIListener l, int page, int per_page, String q)
 			throws Exception {
 		if (page <= 0)
 			page = 1;
@@ -551,8 +542,7 @@ public class APIService extends Service {
 			params += "&q=" + q;
 		HttpUriRequest req = get(userid, token, "products.json" + params);
 		final InternetTask task = new InternetTask(req,
-				APIPriority.FOREGROUND_TASK);
-		task.setAPIListener(l);
+				APIPriority.FOREGROUND_TASK,l);
 		task.setNetworkListener(new NetworkListener() {
 			@Override
 			public void onGivingResult(JSONObject res) {
@@ -587,7 +577,7 @@ public class APIService extends Service {
 			}
 		});
 		executeForegroundTask(task);
-	}
+	}*/
 
 	// /////////////////////////////////TRANSACTION
 	// API//////////////////////////////
@@ -600,8 +590,7 @@ public class APIService extends Service {
 		String params = "?page=" + page + "&per_page=" + per_page;
 		HttpUriRequest req = get(userid, token, "transactions.json" + params);
 		final InternetTask task = new InternetTask(req,
-				APIPriority.FOREGROUND_TASK);
-		task.setAPIListener(l);
+				APIPriority.FOREGROUND_TASK,l);
 		task.setNetworkListener(new NetworkListener() {
 			@Override
 			public void onGivingResult(JSONObject res) {
@@ -632,8 +621,7 @@ public class APIService extends Service {
 		HttpUriRequest req = get(userid, token, "transactions.json/" + id
 				+ ".json");
 		final InternetTask task = new InternetTask(req,
-				APIPriority.FOREGROUND_TASK);
-		task.setAPIListener(l);
+				APIPriority.FOREGROUND_TASK,l);
 		task.setNetworkListener(new NetworkListener() {
 			@Override
 			public void onGivingResult(JSONObject res) {
@@ -673,8 +661,7 @@ public class APIService extends Service {
 		HttpUriRequest req = postWithJSON(userid, token,
 				"transactions/confirm_shipping.json", json);
 		final InternetTask task = new InternetTask(req,
-				APIPriority.CONFIRM_SHIPPING_ACTION);
-		task.setAPIListener(l);
+				APIPriority.CONFIRM_SHIPPING_ACTION,l);
 		task.setNetworkListener(new NetworkListener() {
 			@Override
 			public void onGivingResult(JSONObject res) {
@@ -726,6 +713,51 @@ public class APIService extends Service {
 				+ Base64.encodeToString(source.getBytes(), Base64.URL_SAFE
 						| Base64.NO_WRAP);
 		return ret;
+	}
+	
+	private Product parseJSONtoProduct(JSONObject p) throws JSONException
+	{
+		String id = p.getString("id");
+		Product product = new Product(id);
+		product.setName(p.getString("name"));
+		product.setPrice(p.getString("price"));
+		product.setCategory(p.getString("category"));
+		product.setCity(p.getString("city"));
+		product.setProvince(p.getString("province"));
+		product.setUrl(p.getString("url"));
+		product.setDesc(p.getString("desc"));
+		product.setCondition(p.getString("condition"));
+		product.setNego(p.getString("nego"));
+		product.setSeller_name(p.getString("seller_name"));
+		product.setPayment_ready(p.getString("payment_ready"));
+		
+		JSONArray arr1 = p.getJSONArray("category_structure");
+		ArrayList<String> catstr = new ArrayList<String>();
+		for(int ii = 0 ; ii < arr1.length();ii++)
+		{
+			catstr.add(arr1.getString(ii));
+		}
+		product.setCategory_structure(catstr);
+		
+		JSONArray arr2 = p.getJSONArray("images");
+		ArrayList<String> images = new ArrayList<String>();
+		for(int ii = 0 ; ii < arr2.length();ii++)
+		{
+			images.add(arr2.getString(ii));
+		}
+		product.setImages(images);
+		
+		JSONObject arr3 = p.getJSONObject("specs");
+		HashMap<String,String> specs = new HashMap<String,String>();
+		Iterator<String> iter = arr3.keys();
+		while(iter.hasNext())
+		{
+			String key = iter.next();
+			specs.put(key, arr3.getString(key));
+		}
+		product.setSpecs(specs);
+		
+		return product;
 	}
 
 	@Override
@@ -845,14 +877,14 @@ public class APIService extends Service {
 
 		@Override
 		protected JSONObject doInBackground(JSONObject... params) {
+			JSONObject result = null;
 			if (readyToPush) {
 				DefaultHttpClient httpclient = new DefaultHttpClient();
 				HttpResponse response = null;
 				try {
 					response = httpclient.execute(foregroundTask.getRequest());
 					String temp = parse(response.getEntity().getContent());
-					JSONObject result = new JSONObject(temp);
-					return result;
+					result = new JSONObject(temp);
 				} catch (ClientProtocolException e) {
 					Log.e("Error API", e.getMessage());
 				} catch (IOException e) {
@@ -861,7 +893,7 @@ public class APIService extends Service {
 					Log.e("Error API", e.getMessage());
 				}
 			}
-			return null;
+			return result;
 		}
 
 		@Override

@@ -1,7 +1,11 @@
 package view;
 
+import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+
+import service.APIService;
 
 import model.Product;
 
@@ -10,17 +14,30 @@ import com.example.bukalapaklogin.R.layout;
 import com.example.bukalapaklogin.R.menu;
 
 import controller.APIController;
+import controller.APIListener;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.app.Activity;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.ServiceConnection;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.Menu;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class LapakActivity extends Activity {
 
 	private List<Product>  mListProduct;
 	private ProductItemAdapter adapter;
+private APIService api;
+    
+    private ServiceConnection  mConnection;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +50,58 @@ public class LapakActivity extends Activity {
 		adapter = new ProductItemAdapter(this,mListProduct);
 		//set adapter
 		productList.setAdapter(adapter);
-		//update produk
-		new BrowseTask().execute();
+		
+		mConnection = new ServiceConnection() {
+			@Override
+			public void onServiceConnected(ComponentName arg0, IBinder arg1) {
+				api = ((APIService.MyBinder) arg1).getService();
+		        Toast.makeText(getApplicationContext(), "Connected to API Service", Toast.LENGTH_SHORT).show();
+		        
+		        try {
+					api.retrieveNewAccess("rizkivmaster", "18091992gnome", new APIListener() {
+						
+						@SuppressWarnings("unchecked")
+						@Override
+						public void onSuccess(Object res, Exception e) {
+							api.setSoldProduct(null, "mli3");
+							api.relistProduct(null, "mli3");
+							api.deleteProduct(null, "mli3");
+						}
+						
+						@Override
+						public void onHold() {
+							// TODO Auto-generated method stub
+							
+						}
+						
+						@Override
+						public void onExecute() {
+							// TODO Auto-generated method stub
+							
+						}
+						
+						@Override
+						public void onEnqueue() {
+							// TODO Auto-generated method stub
+							
+						}
+					});
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+
+			@Override
+			public void onServiceDisconnected(ComponentName arg0) {
+				Toast.makeText(getApplicationContext(), "Disconnected from API Service", Toast.LENGTH_SHORT).show();
+			}
+
+	      };
+		
+		Intent intent = new Intent(this, APIService.class);
+        bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
+
 	}
 
 	@Override

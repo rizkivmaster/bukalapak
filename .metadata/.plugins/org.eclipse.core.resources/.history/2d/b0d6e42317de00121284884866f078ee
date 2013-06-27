@@ -1,0 +1,43 @@
+package com.example.bukalapak;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+public class MainActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.upload);
+        HashMap<String,String> fields = new HashMap<String, String>();
+        HashMap<String,EditText> views = new HashMap<String, EditText>();
+        LinearLayout l = (LinearLayout)findViewById(R.id.layout);
+        for (String key : fields.keySet()) {
+        	TextView tx = new TextView(this);
+        	tx.setText(fields.get(key));
+        	EditText ex = new EditText(this);
+        	views.put(key, ex);
+        	l.addView(tx);
+        	l.addView(ex);
+		}
+        
+        tx.setText("Hello");
+        
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+    
+}

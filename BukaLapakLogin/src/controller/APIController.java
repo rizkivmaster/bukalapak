@@ -104,8 +104,8 @@ public class APIController {
 				JSONObject p = products.getJSONObject(ii);
 				String id = p.getString("id");
 				Product product = new Product(id);
-				product.setName(p.getString("name"));
-				product.setPrice(Integer.parseInt(p.getString("price")));
+//				product.setName(p.getString("name"));
+//				product.setPrice(Integer.parseInt(p.getString("price")));
 				result.add(product);
 			}
 		}

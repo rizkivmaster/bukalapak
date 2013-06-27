@@ -1,0 +1,19 @@
+import java.util.PriorityQueue;
+
+
+public class Test {
+	public static void main(String[] arg)
+	{
+		PriorityQueue<>
+	}
+	class Unit implements Comparable<Unit>{
+		String field;
+		@Override
+		public int compareTo(Unit o) {
+			// TODO Auto-generated method stub
+			return 0;
+		}
+		
+		
+	}
+}

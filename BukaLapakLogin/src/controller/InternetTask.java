@@ -32,16 +32,14 @@ public class InternetTask implements Comparable<InternetTask>{
 		this.priority = priority;
 	}
 
-	public void setAPIListener(APIListener aPIListener) {
-		this.apiListener = aPIListener;
-	}
 
 	public void setAppListener(AppListener appListener) {
 		this.appListener = appListener;
 	}
 
-	public InternetTask(HttpUriRequest r,int priority)
+	public InternetTask(HttpUriRequest r,int priority,APIListener l)
 	{
+		apiListener= l;
 		request = r;
 	}
 	
