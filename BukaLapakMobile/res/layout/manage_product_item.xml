@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/gradient_bg"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+	<!--  ListRow Left sied Thumbnail image -->
+	<!--  <LinearLayout android:id="@+id/thumbnail" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:padding="3dip"		
+        android:layout_alignParentLeft="true"
+	    android:layout_marginRight="5dip">-->
+       
+	    <!-- checkbox item produk -->
+	    <CheckBox
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"      
+        android:layout_marginTop="10dip" />
+	    
+	    <!-- thumbnail image -->
+		<ImageView     
+			android:id="@+id/image_item"
+			android:layout_toRightOf="@id/check"   
+	        android:layout_width="50dip"
+	        android:layout_height="50dip"
+	        android:layout_marginRight="10dip"
+	        android:src="@drawable/rating"/>
+        
+	<!--  </LinearLayout>-->
+   
+	<!-- Nama Barang-->
+    <TextView
+        android:id="@+id/title"
+        style="@style/product_name"
+        android:layout_toRightOf="@id/image_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/product_name"
+       />
+    
+    <!-- available/terjual-->
+    <TextView
+        android:id="@+id/status"
+        android:layout_toRightOf="@id/image_item"
+        android:layout_below="@id/title"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ff0000"
+        android:text=" terjual "
+        />  
+    
+    <!--  Stok Barang -->    
+	<TextView
+        android:id="@+id/stock"
+        style="@style/product_stock"
+        android:layout_toRightOf="@id/image_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stok: 21" />
+	
+	<!-- Harga Barang -->
+    <TextView
+        android:id="@+id/price"
+        android:gravity="right"
+    	android:textSize="14sp"
+  		
+  		android:layout_marginLeft="10dp"
+  		android:layout_marginTop="1dp"
+  		android:layout_marginRight="15dp"
+    	android:layout_marginBottom="15dp"     
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Rp 150,000"
+         />
+    
+    <!-- tombol edit -->
+	<TextView
+	    android:id="@+id/btn_edit"
+	    android:layout_below="@id/price"
+	    android:layout_marginLeft="110dp"
+	    android:layout_marginTop="10dp"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignTop="@+id/status"
+	    android:layout_toRightOf="@+id/status"
+	    android:text="Edit"
+	    android:textColor="#a38228"
+	    />
+
+	<!--  <Button
+	    android:id="@+id/btn_edit"
+	    android:layout_below="@id/price"
+	    android:layout_marginLeft="110dp"
+	    android:layout_width="35dp"
+	    android:layout_height="35dp"
+	    android:layout_alignTop="@+id/status"
+	    android:layout_toRightOf="@+id/status"
+	    android:drawableTop="@drawable/content_edit" />-->
+      
+     <!-- Rightend Arrow    
+     <ImageView android:layout_width="wrap_content"
+     	android:layout_height="wrap_content"
+     	android:src="@drawable/arrow"
+     	android:layout_alignParentRight="true"
+     	android:layout_centerVertical="true"
+     	android:layout_marginRight="10dp"
+     	/>-->
+
+</RelativeLayout>

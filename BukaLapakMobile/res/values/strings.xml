@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="app_name">BukaLapak Mobile</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_berhasil">Berhasil</string>
+    <string name="title_activity_testing_view">TestingView</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_list_product">ListProductActivity</string>
+    <string name="title_activity_lapak">LapakActivity</string>
+    
+        <string name="spinner_title">Pilih aksi</string>
+    <string name="company_name">Bukalapak.com</string>
+    <string name="product_name">Kertas</string>
+</resources>

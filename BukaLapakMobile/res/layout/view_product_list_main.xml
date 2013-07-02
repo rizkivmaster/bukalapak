@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+   
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+	
+    <!-- Include Header -->
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_layout" />
+    
+    <TextView
+        android:id="@+id/title_mylapak"
+        style="@style/MenuTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="My Lapak"
+        ></TextView>
+    
+    <LinearLayout 
+    android:id="@+id/panelAction"
+    android:layout_width="wrap_content"
+    android:layout_height="150dp"
+    android:layout_weight="1"
+    android:background="#FFFFFF"
+    android:orientation="horizontal" >
+    
+  <Spinner
+      android:id="@+id/spinner_action"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:prompt="@string/spinner_title"
+            >
+        </Spinner>
+        
+    <Button
+       android:id="@+id/btn_action"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Lakukan!"
+        ></Button>
+
+      <!--   <Button 
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+        android:drawableTop="@drawable/trash"
+        android:text="Hapus"
+        android:textSize="10sp" />
+        
+		<Button 
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+        android:drawableTop="@drawable/trash"
+        android:text="Set Terjual"
+        android:textSize="10sp"
+         />
+		
+		<Button 
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+        android:drawableTop="@drawable/trash"
+        android:text="Set Tidak Dijual"
+        android:textSize="10sp"
+         />
+	--> 
+        </LinearLayout>
+     
+    <LinearLayout 
+    android:id="@+id/panelAction"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:background="#FFFFFFFF"
+    android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="360dp"
+            android:divider="#b5b5b5"
+            android:dividerHeight="1dp"
+            android:listSelector="@drawable/list_selector" >
+
+        </ListView>
+    
+ </LinearLayout>
+ 
+ <!-- Include Footer -->
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/footer_layout" />
+</LinearLayout>

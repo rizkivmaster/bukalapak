@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="60dip"
+    android:layout_gravity="top"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:orientation="vertical" >
+    <TextView
+         android:id="@+id/field_text"
+                android:layout_width="wrap_content"
+                android:layout_height="24dip"
+                android:layout_margin="1dip"
+                android:typeface="sans"
+                android:textColor="#000"
+                android:layout_gravity="top"
+                android:gravity="top"
+    ></TextView>
+   	<EditText
+   	    		android:id="@+id/field_edittext"
+   	    		android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+       			android:layout_marginRight="10dip"
+       			android:layout_marginBottom="10dip"
+                android:background="#b03944"
+                android:padding="10dp"
+                android:textColor="#fff"
+                android:visibility="invisible"
+                android:gravity="top"
+				android:layout_gravity="top"             
+   	    ></EditText>
+   	<Spinner 
+   	    android:id="@+id/field_spinner"
+   	    android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+       			android:layout_marginRight="10dip"
+       			android:layout_marginBottom="10dip"
+                android:background="#b03944"
+                android:padding="10dp"
+                android:visibility="invisible"
+                android:textColor="#fff"
+                android:gravity="top"
+                android:layout_gravity="top"
+   	    >
+   	    </Spinner>
+
+</LinearLayout>

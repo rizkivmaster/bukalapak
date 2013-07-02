@@ -1,0 +1,110 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    
+        <!-- label form -->
+    <style name="label_form">
+        <item name="android:textColor">#000000</item>
+    </style>
+    
+    <!-- Judul halaman -->
+   <style name="MenuTitle">
+       <item name="android:textColor">#a30046</item>
+       <item name="android:textSize">18sp</item>
+       <item name="android:textStyle">bold</item>
+       <item name="android:layout_marginLeft">10dp</item>
+       <item name="android:layout_marginTop">10dp</item>
+       
+       <item name="android:layout_height">15dp</item>
+   </style>
+    
+   <style name="SubMenuTitle">
+       <item name="android:textColor">#a30046</item>
+       <item name="android:textSize">14sp</item>
+       <item name="android:layout_marginLeft">20dp</item>
+       <item name="android:layout_marginTop">10dp</item>
+       <item name="android:layout_marginRight">10dp</item>
+       <item name="android:layout_marginBottom">10dp</item>
+       <item name="android:layout_width">wrap_content</item>
+       <item name="android:layout_height">15dp</item>
+   </style>
+   
+   <!-- koleksi menu utama -->
+    <style name="MenuGrid">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">10dp</item>
+      
+    </style>
+
+    <!-- item menu utama -->
+<style name="MenuButtons">
+   		<item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:divider">#b5b5b5</item>
+        <item name="android:dividerHeight">1dip</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:drawablePadding">2dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#666666</item>
+        <item name="android:background">@drawable/mainmenu_selector</item>     
+</style>
+
+<!-- menu pilih kategori produk -->
+<style name="ListLv1">
+    <item name="android:background">@drawable/gradient_bg_hover</item>
+    <item name="android:textSize">18sp</item>
+    <item name="android:textColor">#ffffff</item>
+</style>
+
+<style name="ListLv2">
+    <item name="android:background">#ffffff</item>
+    <item name="android:textSize">16sp</item>
+    <item name="android:textColor">#a30046</item>
+    <item name="android:layout_marginLeft">20dp</item>
+    <item name="android:layout_marginTop">10dp</item>
+    <item name="android:layout_marginBottom">10dp</item>
+    <item name="android:clickable">true</item>
+</style>
+ 
+<!-- font untuk list produk seller-->
+<style name="product_name">
+    <item name="android:layout_alignTop">@+id/thumbnail</item>
+    <item name="android:layout_toRightOf">@+id/thumbnail</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textSize">16sp</item>
+    <item name="android:textColor">#040404</item>
+</style>
+
+
+
+<style name="product_stock">
+    <item name="android:layout_marginTop">15dp</item>
+    <item name="android:layout_toRightOf">@+id/thumbnail</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:textColor">#343434</item>
+</style>
+    
+</resources>

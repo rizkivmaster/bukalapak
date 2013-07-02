@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:fillViewport="true">
+  <RelativeLayout 
+  		android:layout_width="fill_parent"
+  		android:layout_height="wrap_content" android:background="#ffffff">
+  		
+  		<!--  Header  Starts-->
+  		<LinearLayout android:id="@+id/header"
+  				android:layout_width="fill_parent"
+  				android:layout_height="wrap_content"
+  				android:paddingTop="5dip"
+  				android:paddingBottom="5dip">
+  				<!-- Logo Start-->
+  			 <TextView 
+  				    android:id="@+id/headerLogo"
+  				    android:text="@string/company_name"
+  				    android:textSize="26sp"
+  				    android:textColor="#a30046"
+  				    android:gravity="center_horizontal"
+  				    android:layout_width="match_parent"
+  					android:layout_height="wrap_content"
+  					android:layout_marginLeft="10dip"
+  					android:layout_marginTop="40dip"
+  					android:layout_marginBottom="10dip"
+  			/>
+  			
+  				<!-- Logo Ends -->
+  		</LinearLayout>
+  		<!--  Header Ends -->  
+  		
+  		<!-- Login Form -->
+
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@id/header"
+		    android:orientation="vertical"
+		    android:padding="10dip" >
+
+		    <!-- Email Label -->
+
+		    <TextView
+		        android:id="@+id/text_email"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="Email or Username"
+		        android:textColor="#372c24" />
+
+		    <EditText
+		        android:id="@+id/login_email_username"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginBottom="20dip"
+		        android:layout_marginTop="5dip"
+		        android:inputType="text"
+		        
+		        android:singleLine="true" />
+
+		    <!-- Password Label -->
+
+		    <TextView
+		        android:id="@+id/text_password"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:text="Password"
+		        android:textColor="#372c24" />
+
+		    <EditText
+		        android:id="@+id/login_password"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="5dip"
+		        android:inputType="textPassword"
+		        android:singleLine="true" >
+		        <requestFocus />
+		        </EditText>
+
+		    <!-- Login button -->
+
+		    <Button
+		        android:id="@+id/btnLogin"
+		        android:layout_width="150dp"
+		        android:layout_height="40dp"
+		        android:layout_marginBottom="10dip"
+		        android:layout_marginTop="10dip"
+		        android:layout_weight="0.10"
+		        android:background="@drawable/list_selector"
+		        android:text="Login" />
+
+		    <!-- Link to Lupa Password -->
+
+		    <TextView
+		        android:id="@+id/link_to_password"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginBottom="5dip"
+		        android:layout_marginTop="5dip"
+		        android:text="Lupa Password"
+		        android:textColor="#a30046"
+		        android:textSize="15dip" />
+
+		    <!-- Link to Registration -->
+
+		    <TextView
+		        android:id="@+id/link_to_register"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginBottom="5dip"
+		        android:layout_marginTop="5dip"
+		        android:text="Belum punya akun? Register"
+		        android:textColor="#a30046"
+		        android:textSize="15dip" />
+		    
+		</LinearLayout>
+
+  		<!-- Login Form Ends --> 		
+  		 <ProgressBar
+		        android:id="@+id/progressBar1"
+		        style="@android:style/Widget.ProgressBar.Large.Inverse"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/button1"
+		        android:layout_centerHorizontal="true"
+		        android:layout_centerVertical="true"
+		        android:visibility="gone" />
+  		
+  </RelativeLayout>
+</ScrollView>
